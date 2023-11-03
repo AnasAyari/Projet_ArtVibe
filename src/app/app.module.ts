@@ -9,6 +9,7 @@ import { HomeComponent } from './dynamic/home/home.component';
 import { SideComponent } from './repreatable/side/side.component';
 import { ContentComponent } from './dynamic/home/content/content.component';
 import { MainFocusComponent } from './dynamic/home/main-focus/main-focus.component';
+import { FormulaireComponent } from './dynamic/signUp-logIn/formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainFocusComponent } from './dynamic/home/main-focus/main-focus.compone
     HomeComponent,
     SideComponent,
     ContentComponent,
-    MainFocusComponent
+    MainFocusComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
