@@ -12,6 +12,9 @@
 }
 
 .info{
+    display:flex;
+    align-items:center;
+    justify-content:center;
     width: 40%;
     height: 34rem;
     border-bottom: 4px solid black;

@@ -10,6 +10,8 @@ import { SideComponent } from './repreatable/side/side.component';
 import { ContentComponent } from './dynamic/home/content/content.component';
 import { MainFocusComponent } from './dynamic/home/main-focus/main-focus.component';
 import { FormulaireComponent } from './dynamic/signUp-logIn/formulaire/formulaire.component';
+import { LoginComponent } from './dynamic/signUp-logIn/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { FormulaireComponent } from './dynamic/signUp-logIn/formulaire/formulair
     SideComponent,
     ContentComponent,
     MainFocusComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

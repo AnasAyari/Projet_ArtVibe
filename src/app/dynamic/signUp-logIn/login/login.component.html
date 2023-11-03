@@ -1,0 +1,8 @@
+<div class="activity-container">
+    <label for="">Email</label>
+    <input type="email" #email>
+    <label for="">Password</label>
+    <input type="password" #pwd>
+    <button (click)="checkLogin(email.value,pwd.value)">Login</button>
+    <button (click)="logData()">LogData</button>
+</div>

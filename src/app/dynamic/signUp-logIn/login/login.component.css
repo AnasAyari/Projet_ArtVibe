@@ -1,0 +1,15 @@
+.activity-container{
+    background-color: rgb(106, 129, 129);
+    height:300px;
+    width:300px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
