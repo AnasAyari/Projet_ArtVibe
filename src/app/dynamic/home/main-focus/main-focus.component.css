@@ -1,0 +1,50 @@
+.main-part{
+    display: flex;
+    border-bottom: 5px solid black;
+}
+
+.side-flipped{
+    overflow: hidden;
+    width: 20%;
+    float: right;
+}
+
+.side-flipped img{
+    height: 63.7407vh;
+    z-index: -1;
+}
+.checkUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 63.7407vh;
+    width: 80%;
+}
+
+.checkUs img{
+    height: 80%;
+}
+
+.checkUs button{
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    height: 7vh;
+    width: 20vh;
+}
+
+.checkUs button:hover{
+    border: 3px black solid;
+    background-color: white;
+    color: black;
+}
+
+.checkUs button:active{
+    border: 3px black solid;
+    background-color: black;
+    color: white;
+}
+.checkUs button span{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}

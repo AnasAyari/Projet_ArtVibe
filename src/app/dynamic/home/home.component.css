@@ -1,0 +1,11 @@
+
+.test{
+    display: flex;
+}
+
+.wlcFull{
+    display: flex;
+    flex-direction: column;
+}
+
+

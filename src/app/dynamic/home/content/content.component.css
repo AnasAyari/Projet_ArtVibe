@@ -1,0 +1,29 @@
+
+.text-area{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid black;
+    height: 78.7407vh;
+}
+.paragraph-artvibe{
+    font-weight: bold;
+    margin-left: 1rem;
+}
+.paragraph-artvibe h4{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+
+.home{
+    display: flex;
+}
+
+.image{
+    width: 50%;
+    height: 78.7407vh;
+    overflow: hidden;
+}
+.image img{
+    height: 120%;
+}

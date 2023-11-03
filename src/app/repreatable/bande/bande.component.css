@@ -1,0 +1,33 @@
+
+
+.bande{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 4px black solid;
+    width: 100%;
+    height: 9.2593vh;
+    color: black;
+}
+.bande h1{
+    font-size: 3.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0 1rem;
+    letter-spacing: 2px;
+    animation: move-rtl 2000ms linear infinite;
+}
+
+@keyframes move-rtl{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+.bande:hover{
+    background-color: black;
+    color: white;
+}

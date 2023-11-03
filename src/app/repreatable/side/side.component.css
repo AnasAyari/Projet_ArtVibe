@@ -1,0 +1,10 @@
+.side{
+    overflow: hidden;
+    width: 15vh;
+    height: 90.7407vh;
+    display: flex;
+}
+.side img{
+    height: 100%;
+    width: auto;
+}
