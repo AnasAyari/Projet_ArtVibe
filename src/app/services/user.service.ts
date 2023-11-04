@@ -15,4 +15,7 @@ export class UserService {
   getUsersList(): Observable<User[]>{
     return this.httpClient.get<User[]>(`${this.usersURL}`)
   }
+  saveUser(user:User){
+    return this.httpClient.post(`${this.usersURL}`,user);
+  }
 }

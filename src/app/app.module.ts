@@ -12,6 +12,8 @@ import { MainFocusComponent } from './dynamic/home/main-focus/main-focus.compone
 import { FormulaireComponent } from './dynamic/signUp-logIn/formulaire/formulaire.component';
 import { LoginComponent } from './dynamic/signUp-logIn/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './dynamic/signUp-logIn/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { HttpClientModule } from '@angular/common/http';
     ContentComponent,
     MainFocusComponent,
     FormulaireComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
