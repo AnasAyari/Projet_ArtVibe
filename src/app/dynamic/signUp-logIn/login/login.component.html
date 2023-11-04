@@ -1,8 +1,8 @@
 <div class="activity-container">
     <label for="">Email</label>
-    <input type="email" #email>
+    <input type="email" placeholder="Enter your e-mail..." #email>
     <label for="">Password</label>
-    <input type="password" #pwd>
-    <button (click)="checkLogin(email.value,pwd.value)">Login</button>
+    <input type="password" placeholder="Enter your password..." #pwd>
+    <button (click)="checkLogin(email.value,pwd.value)">LOG <span>IN</span></button>
     <button (click)="logData()">LogData</button>
 </div>
