@@ -18,6 +18,7 @@ input{
     width: 30rem;
     font-size: 1.5rem;
     margin-block: 1rem;
+    outline: none;
 }
 label{
     color: black;
@@ -31,7 +32,7 @@ button{
     background-color: black;
     height: 7vh;
     width: 20vh;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     align-self: center;
 }
 

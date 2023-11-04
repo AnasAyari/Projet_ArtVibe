@@ -33,6 +33,7 @@ button{
     width: 20vh;
     margin-top: 1rem;
     align-self: center;
+    outline: none;
 }
 
 button:hover{
