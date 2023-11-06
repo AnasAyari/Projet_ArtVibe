@@ -14,6 +14,7 @@ import { LoginComponent } from './dynamic/signUp-logIn/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './dynamic/signUp-logIn/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileInfoComponent } from './dynamic/profile/profile-info/profile-info.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     MainFocusComponent,
     FormulaireComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileInfoComponent
   ],
   imports: [
     BrowserModule,
