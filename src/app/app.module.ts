@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BandeComponent } from './repreatable/bande/bande.component';
@@ -15,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './dynamic/signUp-logIn/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileInfoComponent } from './dynamic/profile/profile-info/profile-info.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidenavComponent } from './repreatable/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +34,20 @@ import { ProfileInfoComponent } from './dynamic/profile/profile-info/profile-inf
     FormulaireComponent,
     LoginComponent,
     SignupComponent,
-    ProfileInfoComponent
+    ProfileInfoComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
