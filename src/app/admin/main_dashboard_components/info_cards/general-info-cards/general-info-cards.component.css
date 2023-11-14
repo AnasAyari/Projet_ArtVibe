@@ -1,0 +1,36 @@
+.general_info_card{
+    display:flex;
+    justify-content: space-between;
+    background-color:#E8E8E8;
+    width:250px;
+    height:125px;
+    padding:10px;
+    margin:25px;
+    border-radius:4px;
+    border-top:4px solid #287bff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.5s;
+}
+.info_cards{
+    width:90vw;
+}
+.general_info_card:hover{
+    transform: translateY(-20px);
+    transition: all 0.5s;
+}
+.card_title_info{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+}
+.card_title_info h1 {
+    font-size:20px;
+}
+.card_title_info h2 {
+    font-size:15px;
+    font-weight:bold;
+}
+.logo{
+    height:60px;
+    width:60px;
+}

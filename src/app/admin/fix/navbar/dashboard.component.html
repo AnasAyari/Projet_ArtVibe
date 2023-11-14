@@ -1,0 +1,201 @@
+<mat-toolbar class="Artvibe_Header">
+    <mat-toolbar-row>
+        <button (click)="sidenav.toggle();" mat-icon-button>
+            <mat-icon class="menu-button" >menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav class="dashboard-sidenav">
+        <mat-nav-list>
+            <a mat-list-item href="">
+                <div class="dashboard-sidnav-i">
+                    <mat-icon class="sidebar_icon">home</mat-icon>
+                    Home
+                </div>
+            </a>
+            <a mat-list-item href="dashboard">
+                <div class="sidebar_item">
+                    <mat-icon class="sidebar_icon">dashboard</mat-icon>
+                    Dashboard
+                </div>
+            </a>
+            <a mat-list-item href="events">
+                <div class="sidebar_item">
+                    <mat-icon class="sidebar_icon">person</mat-icon>
+                    Events
+                </div>
+            </a>
+            <a mat-list-item href="content">
+                <div class="sidebar_item">
+                    <mat-icon class="sidebar_icon">assignment</mat-icon>
+                    Content
+                </div>
+            </a>
+            <a mat-list-item href="tasks">
+                <div class="sidebar_item">
+                    <mat-icon class="sidebar_icon">playlist_add_check</mat-icon>
+                    Tasks
+                </div>
+            </a>
+            <a mat-list-item>
+                <div class="sidebar_item" (click)="openScorecardPopup()">
+                    <mat-icon class="sidebar_icon" >assessment</mat-icon>
+                    Scorecard
+                </div>
+            </a>
+            <a mat-list-item>
+                <div class="sidebar_item" (click)="openPasswordPopup()">
+                    <mat-icon class="sidebar_icon">https</mat-icon>
+                    Password
+                </div>
+            </a>
+            <a mat-list-item>
+                <div class="sidebar_item" (click)="openSignoutPopup()">
+                    <mat-icon class="sidebar_icon">keyboard_backspace</mat-icon>
+                    Sign out
+                </div>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="height:100%;width:100%;">
+        <div class="dashboard-main-container">
+                <div class="last-month-activitites">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h1>Activities Last Month</h1>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Participant number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    c# Workshop
+                                </td>
+                                <td>
+                                    14/11/2023
+                                </td>
+                                <td class="d-flex justify-content-center">
+                                    <p class="badge bg-black participant-number" >
+                                        12
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    c# Workshop
+                                </td>
+                                <td>
+                                    14/11/2023
+                                </td>
+                                <td class="d-flex justify-content-center">
+                                    <p class="badge bg-black participant-number">
+                                        12
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    c# Workshop
+                                </td>
+                                <td>
+                                    14/11/2023
+                                </td>
+                                <td class="d-flex justify-content-center">
+                                    <p class="badge bg-black participant-number">
+                                        12
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="most-participating-users">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h2>Most Participating Members</h2>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Total participations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="m-p-user-cursor">
+                                <td>
+                                    TBTaleb
+                                </td>
+                                <td class="d-flex justify-content-center">
+                                    <p class="badge bg-black participant-number" >
+                                        12
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="m-p-user-cursor">
+                                <td>
+                                    TBTaleb
+                                </td>
+                                <td class="d-flex justify-content-center">
+                                    <p class="badge bg-black participant-number">
+                                        12
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="m-p-user-cursor">
+                                <td>
+                                    TBTaleb
+                                </td>
+                                <td class="d-flex justify-content-center">
+                                    <p class="badge bg-black participant-number">
+                                        12
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            <div class="img-card-container">
+                <div class="cardA cards">
+                
+                </div>
+                <div class="cardB cards">
+                    
+                </div>
+                <div class="cardC cards">
+    
+                </div>
+            </div>
+        </div>
+        
+        <div class="second-container">
+            <div class="big-image">
+                
+            </div>
+            <div class="informations">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </div>
+        <div class="third-container">
+            <div class="events">
+                <h2>Upcoming event:</h2>
+            </div>
+            <div class="events">
+                <h2>Most Liked Event:</h2>
+            </div>
+            <div class="events">
+                <h2>Last Event:</h2>
+            </div>
+            <div class="events">
+                <h2>Active Event:</h2>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
