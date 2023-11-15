@@ -1,0 +1,38 @@
+<mat-toolbar class="Artvibe_Header">
+    <mat-toolbar-row>
+        <button (click)="sidenav.toggle();" mat-icon-button>
+            <mat-icon class="menu-button" >menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav class="dashboard-sidenav">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/admin/home">
+                <div class="dashboard-sidnav-i">
+                    <mat-icon class="sidebar_icon">home</mat-icon>
+                    Home
+                </div>
+            </a>
+            <a mat-list-item routerLink="/admin/activitieslist">
+                <div class="sidebar_item">
+                    Activities List
+                </div>
+            </a>
+            <a mat-list-item routerLink="/admin/userslist">
+                <div class="sidebar_item">
+                    Users List
+                </div>
+            </a>
+            <a mat-list-item routerLink="/admin/requests">
+                <div class="sidebar_item">
+                    Requests
+                </div>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="height:100%;width:100%;scroll-behavior: initial;">
+        <!--######################ROUTER OUTLET######################-->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
