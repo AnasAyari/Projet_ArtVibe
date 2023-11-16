@@ -27,6 +27,9 @@ import { DashboardHomeComponent } from './admin/dashboard-home/dashboard-home.co
 import { UsersListComponent } from './admin/users-list/users-list.component';
 import { RequestsComponent } from './admin/requests/requests.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ContentListComponent } from './user/content-list/content-list.component';
+import { ContentDetailsComponent } from './user/content-details/content-details.component';
+import { UserContentComponent } from './user/user-content/user-content.component';
 
 
 @NgModule({
@@ -47,7 +50,10 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     ActivitiesListComponent,
     DashboardHomeComponent,
     UsersListComponent,
-    RequestsComponent
+    RequestsComponent,
+    ContentListComponent,
+    ContentDetailsComponent,
+    UserContentComponent,
   ],
   imports: [
     BrowserModule,

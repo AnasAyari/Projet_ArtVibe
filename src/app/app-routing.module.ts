@@ -24,9 +24,8 @@ const routes: Routes = [
   children:[
     {path:"login",component:LoginComponent},
     {path:"signup",component:SignupComponent},
-    ]
+    ],
   },
-  
 ];
 
 @NgModule({
