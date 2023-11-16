@@ -21,6 +21,9 @@ import { FormsModule } from '@angular/forms';
 import { ProfileInfoComponent } from './dynamic/profile/profile-info/profile-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './repreatable/sidenav/sidenav.component';
+import { DashboardComponent } from './admin/fix/navbar/dashboard.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { SidenavComponent } from './repreatable/sidenav/sidenav.component';
     LoginComponent,
     SignupComponent,
     ProfileInfoComponent,
-    SidenavComponent
+    SidenavComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +52,7 @@ import { SidenavComponent } from './repreatable/sidenav/sidenav.component';
     MatListModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
