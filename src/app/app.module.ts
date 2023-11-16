@@ -21,8 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { ProfileInfoComponent } from './dynamic/profile/profile-info/profile-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './repreatable/sidenav/sidenav.component';
-import { DashboardComponent } from './admin/fix/navbar/dashboard.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 @NgModule({

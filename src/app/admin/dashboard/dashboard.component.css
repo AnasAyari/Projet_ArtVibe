@@ -107,6 +107,15 @@
     display:inline;
 }
 
+.hover{
+    transform: scale(1);
+}
+
+.hover:hover{
+    transform: scale(1.05);
+    transition: all 0.4s ease-out;
+}
+
 @media screen and (max-width: 1024px){
     .last-month-activities{
         width:200px;
