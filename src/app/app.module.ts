@@ -21,8 +21,12 @@ import { FormsModule } from '@angular/forms';
 import { ProfileInfoComponent } from './dynamic/profile/profile-info/profile-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './repreatable/sidenav/sidenav.component';
-import { DashboardComponent } from './admin/fix/navbar/dashboard.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ActivitiesListComponent } from './admin/activities-list/activities-list.component';
+import { DashboardHomeComponent } from './admin/dashboard-home/dashboard-home.component';
+import { UsersListComponent } from './admin/users-list/users-list.component';
+import { RequestsComponent } from './admin/requests/requests.component';
 
 
 @NgModule({
@@ -39,7 +43,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     SignupComponent,
     ProfileInfoComponent,
     SidenavComponent,
-    DashboardComponent
+    DashboardComponent,
+    ActivitiesListComponent,
+    DashboardHomeComponent,
+    UsersListComponent,
+    RequestsComponent
   ],
   imports: [
     BrowserModule,

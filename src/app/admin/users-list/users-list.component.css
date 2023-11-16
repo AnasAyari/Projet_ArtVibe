@@ -29,4 +29,9 @@
     background-color:white;
     font-weight:bold;
 }
+.userslist-sortBtn:hover,.userslist-addBtn:hover, .userslist-deleteBtn:hover{
+    background-color:black;
+    transform: translateY(-5px);
+    color:white;
+}
 

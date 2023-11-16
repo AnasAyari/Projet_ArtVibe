@@ -29,6 +29,11 @@
     background-color:white; 
     font-weight:bold;
 }
+.requests-approveBtn:hover,.requests-cancelBtn:hover, .requests-sortBtn:hover{
+    background-color:black;
+    transform: translateY(-5px);
+    color:white;
+}
 .requests-approveBtn{
     margin-right:15px;
 }

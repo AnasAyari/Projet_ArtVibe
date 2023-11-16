@@ -8,24 +8,23 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav class="dashboard-sidenav">
         <mat-nav-list>
-            <a mat-list-item routerLink="/admin/home">
-                <div class="dashboard-sidnav-i">
-                    <mat-icon class="sidebar_icon">home</mat-icon>
+            <a mat-list-item routerLink="/admin/home" >
+                <div routerLinkActive="dashboard-sidnav-i">
                     Home
                 </div>
             </a>
             <a mat-list-item routerLink="/admin/activitieslist">
-                <div class="sidebar_item">
+                <div routerLinkActive="dashboard-sidnav-i">
                     Activities List
                 </div>
             </a>
             <a mat-list-item routerLink="/admin/userslist">
-                <div class="sidebar_item">
+                <div routerLinkActive="dashboard-sidnav-i">
                     Users List
                 </div>
             </a>
             <a mat-list-item routerLink="/admin/requests">
-                <div class="sidebar_item">
+                <div routerLinkActive="dashboard-sidnav-i">
                     Requests
                 </div>
             </a>
