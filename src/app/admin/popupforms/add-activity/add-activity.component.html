@@ -1,0 +1,12 @@
+<div>
+    <mat-form-field>
+        <label for="">title</label>
+        <input matInput [(ngModel)]="data.title">
+        <label for="">participant number</label>
+        <input matInput [(ngModel)]="data.category">
+    </mat-form-field>
+    <div>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+    </div>
+</div>

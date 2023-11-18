@@ -17,34 +17,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor="let user of usersTable">
                         <td>
-                            Ayar
+                            {{user.username}}
                         </td>
                         <td>
-                            Ayar@gmail.com
-                        </td>
-                        <td>
-                            <button class="userslist-deleteBtn">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Ayar
-                        </td>
-                        <td>
-                            Ayar@gmail.com
-                        </td>
-                        <td>
-                            <button class="userslist-deleteBtn">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Ayar
-                        </td>
-                        <td>
-                            Ayar@gmail.com
+                            {{user.email}}
                         </td>
                         <td>
                             <button class="userslist-deleteBtn">Delete</button>

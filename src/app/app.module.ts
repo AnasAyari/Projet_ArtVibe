@@ -27,6 +27,8 @@ import { DashboardHomeComponent } from './admin/dashboard-home/dashboard-home.co
 import { UsersListComponent } from './admin/users-list/users-list.component';
 import { RequestsComponent } from './admin/requests/requests.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AddActivityComponent } from './admin/popupforms/add-activity/add-activity.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     ActivitiesListComponent,
     DashboardHomeComponent,
     UsersListComponent,
-    RequestsComponent
+    RequestsComponent,
+    AddActivityComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     MatListModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
