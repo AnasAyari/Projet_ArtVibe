@@ -1,6 +1,7 @@
 
 html, body { 
     height: 100%; 
+    --mdc-filled-text-field-container-color: white;
 }
 body { 
     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 

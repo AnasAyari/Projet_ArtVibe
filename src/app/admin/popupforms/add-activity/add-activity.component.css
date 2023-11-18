@@ -1,0 +1,13 @@
+.add-activity-form{
+    width:100%;
+    
+    
+}
+.add-activity{
+    width:400px;
+    border-radius:0px;
+    
+}
+.mdc-line-ripple::before, .mdc-line-ripple::after{
+    border-bottom-style: none;
+}

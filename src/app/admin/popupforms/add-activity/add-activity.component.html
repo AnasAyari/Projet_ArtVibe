@@ -1,12 +1,43 @@
-<div>
-    <mat-form-field>
-        <label for="">title</label>
-        <input matInput [(ngModel)]="data.title">
-        <label for="">participant number</label>
-        <input matInput [(ngModel)]="data.category">
-    </mat-form-field>
-    <div>
-        <button mat-button (click)="onNoClick()">No Thanks</button>
+<div class="add-activity">
+        <mat-form-field class="add-activity-form" >
+            <table>
+                <tr>
+                    <td>
+                        <label for="">title</label>
+                    </td>
+                    <td>
+                        <input matInput [(ngModel)]="data.title" style="border:3px solid black;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Category</label>
+                    </td>
+                    <td>
+                        <input matInput [(ngModel)]="data.category" style="border:3px solid black;" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Photo</label>
+                    </td>
+                    <td>
+                        <input type="file" [(ngModel)]="data.photo" style="border:3px solid black;" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="data.date" style="border:3px solid black;">
+                    </td>
+                    <td>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </td>
+                </tr>
+            </table>
+        </mat-form-field>
+    <div class="add-activityBtns">
+        <button mat-button (click)="onNoClick()">Cancel</button>
         <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
     </div>
 </div>

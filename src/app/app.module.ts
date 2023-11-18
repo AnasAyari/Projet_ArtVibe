@@ -33,6 +33,8 @@ import { UserContentComponent } from './user/user-content/user-content.component
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AddActivityComponent } from './admin/popupforms/add-activity/add-activity.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -72,6 +74,9 @@ import { AddActivityComponent } from './admin/popupforms/add-activity/add-activi
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,7 +13,6 @@ import { AddActivityComponent } from '../popupforms/add-activity/add-activity.co
 export class ActivitiesListComponent implements OnInit{
 
   activitiesTable!:Activity[];
-
   constructor(private activityService:ActivityService,public dialog: MatDialog){}
 
   ngOnInit(): void {
@@ -27,16 +26,25 @@ export class ActivitiesListComponent implements OnInit{
       console.log(data);
     })
   }
-  animal!: string;
-  name!: string;
+  
+  act = new Activity();
+  
   openAddActivity() {
     const dialogRef = this.dialog.open(AddActivityComponent, {
-      data: { name: this.name, animal: this.animal }
+      data: {title:this.act?.title,category:this.act?.category}
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
-      console.log(this.animal);
+      this.act = result;
+      /*console.log(result);*/
+      
+      console.log(this.act);
+      this.addActivity(this.act);
+    });
+  }
+  addActivity(activity:Activity){
+    this.activityService.saveActivity(activity).subscribe(data => {
+      console.log(data);
     });
   }
 }

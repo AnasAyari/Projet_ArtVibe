@@ -9,7 +9,7 @@ import { Activity } from 'src/app/models/activity';
 })
 export class AddActivityComponent {
 
-  constructor(public dialogRef:MatDialogRef<AddActivityComponent>,@Inject(MAT_DIALOG_DATA) public data:any){}
+  constructor(public dialogRef:MatDialogRef<AddActivityComponent>,@Inject(MAT_DIALOG_DATA) public data:Activity){}
 
   onNoClick(): void {
     this.dialogRef.close();

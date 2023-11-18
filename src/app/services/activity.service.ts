@@ -14,6 +14,9 @@ export class ActivityService {
   getActivities():Observable<Activity[]>{
     return this.httpClient.get<Activity[]>(this.activityURL);
   }
+  saveActivity(activity:Activity){
+    return this.httpClient.post<Activity[]>(`${this.activityURL}`,activity);
+  }
 
   
 }
