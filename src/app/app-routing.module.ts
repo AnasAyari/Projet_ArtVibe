@@ -9,6 +9,10 @@ import { ActivitiesListComponent } from './admin/activities-list/activities-list
 import { DashboardHomeComponent } from './admin/dashboard-home/dashboard-home.component';
 import { UsersListComponent } from './admin/users-list/users-list.component';
 import { RequestsComponent } from './admin/requests/requests.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { LikepostsComponent } from './user/likeposts/likeposts.component';
+import { SavedpostsComponent } from './user/savedposts/savedposts.component';
+import { UserapplicationsComponent } from './user/userapplications/userapplications.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -26,6 +30,12 @@ const routes: Routes = [
     {path:"signup",component:SignupComponent},
     ],
   },
+  {path:"userProfile",component:UserProfileComponent,
+children:[
+  {path:"likedPosts",component:LikepostsComponent},
+  {path:"saveddPosts",component:SavedpostsComponent},
+  {path:"userApplications",component:UserapplicationsComponent}
+]}
 ];
 
 @NgModule({

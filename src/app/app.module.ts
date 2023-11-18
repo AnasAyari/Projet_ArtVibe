@@ -33,6 +33,10 @@ import { UserContentComponent } from './user/user-content/user-content.component
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AddActivityComponent } from './admin/popupforms/add-activity/add-activity.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { LikepostsComponent } from './user/likeposts/likeposts.component';
+import { SavedpostsComponent } from './user/savedposts/savedposts.component';
+import { UserapplicationsComponent } from './user/userapplications/userapplications.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,11 @@ import { AddActivityComponent } from './admin/popupforms/add-activity/add-activi
     ContentListComponent,
     ContentDetailsComponent,
     UserContentComponent,
-    AddActivityComponent
+    AddActivityComponent,
+    UserProfileComponent,
+    LikepostsComponent,
+    SavedpostsComponent,
+    UserapplicationsComponent
   ],
   imports: [
     BrowserModule,
