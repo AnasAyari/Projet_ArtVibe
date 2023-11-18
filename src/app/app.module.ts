@@ -30,7 +30,9 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ContentListComponent } from './user/content-list/content-list.component';
 import { ContentDetailsComponent } from './user/content-details/content-details.component';
 import { UserContentComponent } from './user/user-content/user-content.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { AddActivityComponent } from './admin/popupforms/add-activity/add-activity.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { UserContentComponent } from './user/user-content/user-content.component
     ContentListComponent,
     ContentDetailsComponent,
     UserContentComponent,
+    AddActivityComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,9 @@ import { UserContentComponent } from './user/user-content/user-content.component
     MatListModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
