@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class UserProfileComponent {
 
+  constructor(private router:Router){
+
+  }
+
+  onClick(path:string){
+    this.router.navigate([path]);
+  }
 }

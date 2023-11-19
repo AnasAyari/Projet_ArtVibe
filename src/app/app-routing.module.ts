@@ -30,12 +30,10 @@ const routes: Routes = [
     {path:"signup",component:SignupComponent},
     ],
   },
-  {path:"userProfile",component:UserProfileComponent,
-children:[
+  {path:"userProfile",component:UserProfileComponent},
   {path:"likedPosts",component:LikepostsComponent},
-  {path:"saveddPosts",component:SavedpostsComponent},
+  {path:"savedPosts",component:SavedpostsComponent},
   {path:"userApplications",component:UserapplicationsComponent}
-]}
 ];
 
 @NgModule({
