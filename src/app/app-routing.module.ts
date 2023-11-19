@@ -13,6 +13,8 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
 import { LikepostsComponent } from './user/likeposts/likeposts.component';
 import { SavedpostsComponent } from './user/savedposts/savedposts.component';
 import { UserapplicationsComponent } from './user/userapplications/userapplications.component';
+import { ContentDetailsComponent } from './user/content-details/content-details.component';
+import { ContentListComponent } from './user/content-list/content-list.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -33,7 +35,9 @@ const routes: Routes = [
   {path:"userProfile",component:UserProfileComponent},
   {path:"likedPosts",component:LikepostsComponent},
   {path:"savedPosts",component:SavedpostsComponent},
-  {path:"userApplications",component:UserapplicationsComponent}
+  {path:"userApplications",component:UserapplicationsComponent},
+  {path:"content",component:ContentListComponent},
+  {path:"contentDetails", component:ContentDetailsComponent},
 ];
 
 @NgModule({
