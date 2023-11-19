@@ -1,0 +1,5 @@
+.contentList-container{
+    height: 90vh;
+    background-image: url(../../../assets/images/contentListBackground.png);
+    overflow-y: scroll;
+}
