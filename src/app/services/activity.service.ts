@@ -23,5 +23,9 @@ export class ActivityService {
     return this.httpClient.post<Activity[]>(`${this.activityURL}`,activity);
   }
 
+  deleteActivity(activityID:number):Observable<Activity>{
+    return this.httpClient.delete<Activity>(`${this.activityURL}/${activityID}`);
+  }
+
   
 }

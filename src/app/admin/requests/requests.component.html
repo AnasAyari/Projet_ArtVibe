@@ -25,7 +25,7 @@
                             {{getRequestActivity(r.requestActivityID)?.title}}
                         </td>
                         <td>
-                            <button class="requests-approveBtn" (click)="acceptRequest(r.requestUserID,r.requestActivityID,r.requestID)">Approve</button>
+                            <button class="requests-approveBtn" (click)="onAccept(r.requestUserID,r.requestActivityID,r.requestID)">Approve</button>
                             <button class="requests-cancelBtn" (click)="deleteRequest(r.requestID)">Cancel</button>
                         </td>
                     </tr>

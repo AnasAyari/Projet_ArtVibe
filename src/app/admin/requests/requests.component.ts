@@ -27,20 +27,19 @@ export class RequestsComponent implements OnInit{
   getAllRequests(){
     this.requestService.getRequests().subscribe(data => {
       this.requestsTable = data;
-      console.log(this.requestsTable);
+      
     })
   }
   getAllUsers(){
     this.userService.getUsersList().subscribe(data => {
       this.usersTable = data;
-      console.log(this.usersTable);
     })
   }
   //GET ALL ACTIVITIES
   getAllActivities(){
     this.activityService.getActivities().subscribe( data => {
       this.activitiesTable = data;
-      console.log(this.activitiesTable);
+      
     })
   }
   //GET A USER BY ID
@@ -65,16 +64,24 @@ export class RequestsComponent implements OnInit{
   deleteRequest(requestID:number){
     this.requestService.deleteRequest(requestID).subscribe( () => {
       this.requestsTable = this.requestsTable.filter((req) => req.requestID !== requestID);
+      console.log("request deleted!!!");
     });
   }
   //ACCEPT A PARTICIPATION REQUEST AND ADD A USER TO AN ACTIVITIES PARTICIPANTS LIST
   acceptRequest(userID:number,activityID:number,requestID:number){
+    this.getRequestActivity(activityID).participantNB += 1;
     this.getRequestActivity(activityID).participant.push(this.getRequestUser(userID));
     console.log(this.getRequestActivity(activityID));
-    this.getRequestActivity(activityID).participantNB++;
-    this.requestService.addParticipant(activityID,this.getRequestActivity(activityID)).subscribe(data =>{
-      console.log(data);
-      });
-      this.deleteRequest(requestID);
+    
+    this.requestService.addParticipant(activityID,this.getRequestActivity(activityID)).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
+  }
+
+  onAccept(userID:number,activityID:number,requestID:number){
+    this.acceptRequest(userID,activityID,requestID);
+    this.deleteRequest(requestID);
   }
 }
