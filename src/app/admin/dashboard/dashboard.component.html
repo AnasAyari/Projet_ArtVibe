@@ -1,37 +1,39 @@
-<mat-toolbar class="Artvibe_Header">
-    <mat-toolbar-row>
-        <button (click)="sidenav.toggle();" mat-icon-button>
-            <mat-icon class="menu-button" >menu</mat-icon>
-        </button>
-    </mat-toolbar-row>
-</mat-toolbar>
-<mat-sidenav-container>
-    <mat-sidenav #sidenav class="dashboard-sidenav">
-        <mat-nav-list>
-            <a mat-list-item routerLink="/admin/home" >
-                <div routerLinkActive="dashboard-sidnav-i">
-                    Home
-                </div>
-            </a>
-            <a mat-list-item routerLink="/admin/activitieslist">
-                <div routerLinkActive="dashboard-sidnav-i">
-                    Activities List
-                </div>
-            </a>
-            <a mat-list-item routerLink="/admin/userslist">
-                <div routerLinkActive="dashboard-sidnav-i">
-                    Users List
-                </div>
-            </a>
-            <a mat-list-item routerLink="/admin/requests">
-                <div routerLinkActive="dashboard-sidnav-i">
-                    Requests
-                </div>
-            </a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content style="height:100%;width:100%;scroll-behavior: smooth;">
-        <!--######################ROUTER OUTLET######################-->
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
+<div class="dashboard-background">
+    <mat-toolbar class="Artvibe_Header">
+        <mat-toolbar-row>
+            <button (click)="sidenav.toggle();" mat-icon-button>
+                <mat-icon class="menu-button" >menu</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav class="dashboard-sidenav">
+            <mat-nav-list>
+                <a mat-list-item routerLink="/admin/home" >
+                    <div routerLinkActive="dashboard-sidnav-i">
+                        Home
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/admin/activitieslist">
+                    <div routerLinkActive="dashboard-sidnav-i">
+                        Activities List
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/admin/userslist">
+                    <div routerLinkActive="dashboard-sidnav-i">
+                        Users List
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/admin/requests">
+                    <div routerLinkActive="dashboard-sidnav-i">
+                        Requests
+                    </div>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content style="height:100%;width:100%;scroll-behavior: smooth;">
+            <!--######################ROUTER OUTLET######################-->
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
 </mat-sidenav-container>
+</div>

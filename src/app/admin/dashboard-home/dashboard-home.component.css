@@ -114,6 +114,7 @@
     border:3px solid black;
     width:280px;
     height:200px;
+    background-color: white;
 }
 .mat-drawer-content{
     display:inline;

@@ -1,0 +1,74 @@
+.post-container{
+    width: 100%;
+    min-height: 88vh;
+    cursor: crosshair;
+}
+.postImage-container{
+    width: 80%;
+    min-height: 90vh;
+    margin-right: 2rem;
+    border-right: 0.3rem solid black;
+    background-image: url(../../../assets/images/contentListBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.postImage-container img{
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 25px;
+}
+
+.postDetails-container{
+    width: 100%;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 7rem;
+    color: black;
+    margin: 1.5rem;
+}
+
+.title h1{
+    font-size: 10rem;
+    margin-bottom: 3.5rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.uploader{
+    align-items: center;
+}
+
+.uploader img{
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0.75rem;
+    margin: 1.rem
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.date{
+    margin-bottom: 1.5rem;
+}
+
+.participants-section{
+    margin-top: 1.5rem;
+    text-align: center;
+    transform: scale(1.5);
+}
+
+.participants-section ul{
+    list-style-type: none;
+    padding: 0;
+}
