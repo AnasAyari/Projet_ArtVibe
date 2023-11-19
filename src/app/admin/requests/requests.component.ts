@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Activity } from 'src/app/models/activity';
 import { User } from 'src/app/models/user';
 import { ActivityService } from 'src/app/services/activity.service';
@@ -12,7 +13,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RequestsComponent implements OnInit{
 
-  requestsTable:any[] = [];
+  requestsTable!:any[];
   usersTable:User[] = [];
   activitiesTable:Activity[] = [];
   constructor(private requestService:RequestService,private userService:UserService,private activityService:ActivityService){}
@@ -35,13 +36,15 @@ export class RequestsComponent implements OnInit{
       console.log(this.usersTable);
     })
   }
+  //GET ALL ACTIVITIES
   getAllActivities(){
     this.activityService.getActivities().subscribe( data => {
       this.activitiesTable = data;
       console.log(this.activitiesTable);
     })
   }
-  getRequestUser(userID:number){
+  //GET A USER BY ID
+  getRequestUser(userID:number):any{
     for (let i = 0; i < this.usersTable.length; i++) {
       if (this.usersTable[i].userID == userID) {
           return this.usersTable[i];
@@ -49,8 +52,8 @@ export class RequestsComponent implements OnInit{
     }
     return null;
   }
-
-  getRequestActivity(activityID:number){
+  //GET A USER BY ID
+  getRequestActivity(activityID:number):any{
     for (let i = 0; i < this.activitiesTable.length; i++) {
       if (this.activitiesTable[i].activityID == activityID) {
           return this.activitiesTable[i];
@@ -58,5 +61,20 @@ export class RequestsComponent implements OnInit{
     }
     return null;
   }
-  
+  //DELETE A REQUEST AND UPDATE WITHOUT REFRESH
+  deleteRequest(requestID:number){
+    this.requestService.deleteRequest(requestID).subscribe( () => {
+      this.requestsTable = this.requestsTable.filter((req) => req.requestID !== requestID);
+    });
+  }
+  //ACCEPT A PARTICIPATION REQUEST AND ADD A USER TO AN ACTIVITIES PARTICIPANTS LIST
+  acceptRequest(userID:number,activityID:number,requestID:number){
+    this.getRequestActivity(activityID).participant.push(this.getRequestUser(userID));
+    console.log(this.getRequestActivity(activityID));
+    this.getRequestActivity(activityID).participantNB++;
+    this.requestService.addParticipant(activityID,this.getRequestActivity(activityID)).subscribe(data =>{
+      console.log(data);
+      });
+      this.deleteRequest(requestID);
+  }
 }
