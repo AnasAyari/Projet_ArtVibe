@@ -47,5 +47,13 @@ export class ActivitiesListComponent implements OnInit{
       console.log(data);
     });
   }
+
+  deleteActivityById(activityID:number){
+    this.activityService.deleteActivity(activityID).subscribe( () => {
+      this.activitiesTable = this.activitiesTable.filter((act) => act.activityID !== activityID);
+    })
+  }
 }
+
+
 
