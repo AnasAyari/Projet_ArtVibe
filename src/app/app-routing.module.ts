@@ -20,6 +20,7 @@ import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-lis
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
+  {path:'',redirectTo:'home',pathMatch:'full'},
   {path:"admin",component:DashboardComponent,
   children:[
     {path:"home",component:DashboardHomeComponent},

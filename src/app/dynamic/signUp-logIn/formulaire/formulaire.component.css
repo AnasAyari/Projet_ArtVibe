@@ -122,10 +122,11 @@
     border-bottom: 4px solid black;
 }
 .banner h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
     text-transform: uppercase;
     font-size: 5rem;
-    transform:scale(1.75,1);
+    transform:scale(4,1.5);
 }
 .empBG{
     grid-area:empBG;
@@ -135,10 +136,10 @@
 .wave{
     grid-area:wave;
     overflow: hidden;
-    background-image: url("../../../../assets/images/wave.png");
+    background-image: url("../../../../assets/images/1.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 110%;
+    background-size: 300%;
     filter: grayscale();
 }   
 .detailSec{
@@ -150,9 +151,21 @@
 }
 .detailSec h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:4rem;
+    text-align: center;
+    line-height: 4rem;
+    color: black;
+
+}
+
+.empBG{
+    background-image: url(../../../../assets/images/bg4.jpg);
 }
 .detailSec p{
-    margin-inline: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    margin-inline: 1.5rem;
+    font-size: 1.5rem;
 }
 .bottomimg{
     background-image: url("../../../../assets/images/pattern.png");

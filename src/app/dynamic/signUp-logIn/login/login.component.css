@@ -51,6 +51,19 @@ button span{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 2px;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+a:hover{
+    transform: scale(1.01);
+    transition: all ease-in-out 0.1s;
+}
+
 @media screen and (max-width: 1024px){
     input{
         border: none;
