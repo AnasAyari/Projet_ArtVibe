@@ -15,6 +15,8 @@ import { SavedpostsComponent } from './user/savedposts/savedposts.component';
 import { UserapplicationsComponent } from './user/userapplications/userapplications.component';
 import { ContentDetailsComponent } from './user/content-details/content-details.component';
 import { ContentListComponent } from './user/content-list/content-list.component';
+import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-list.component';
+import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -33,8 +35,8 @@ const routes: Routes = [
     ],
   },
   {path:"userProfile",component:UserProfileComponent},
-  {path:"likedPosts",component:LikepostsComponent},
-  {path:"savedPosts",component:SavedpostsComponent},
+  {path:"likedPostsList",component:LikedPostsListComponent},
+  {path:"savedPostsList",component:SavedPostsListComponent},
   {path:"userApplications",component:UserapplicationsComponent},
   {path:"content",component:ContentListComponent},
   {path:"contentDetails", component:ContentDetailsComponent},

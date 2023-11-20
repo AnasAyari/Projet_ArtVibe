@@ -25,5 +25,6 @@
     overflow: hidden;
 }
 .image img{
-    height: 120%;
+    height: 1080px;
+    width: 1080px;
 }
