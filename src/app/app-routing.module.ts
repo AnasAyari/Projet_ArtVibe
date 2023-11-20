@@ -16,12 +16,13 @@ import { UserapplicationsComponent } from './user/userapplications/userapplicati
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
-  {path:"admin",component:DashboardComponent,
+  {path:"admin/:id",component:DashboardComponent,
   children:[
     {path:"home",component:DashboardHomeComponent},
     {path:"activitieslist",component:ActivitiesListComponent},
     {path:"userslist",component:UsersListComponent},
     {path:"requests",component:RequestsComponent},
+    {path:"",redirectTo:"home",pathMatch:"full"},
     ]
   },
   {path:"form",component:FormulaireComponent,
@@ -30,10 +31,10 @@ const routes: Routes = [
     {path:"signup",component:SignupComponent},
     ],
   },
-  {path:"userProfile",component:UserProfileComponent},
-  {path:"likedPosts",component:LikepostsComponent},
-  {path:"savedPosts",component:SavedpostsComponent},
-  {path:"userApplications",component:UserapplicationsComponent}
+  {path:"userProfile/:id",component:UserProfileComponent},
+  {path:"likedPosts/:id",component:LikepostsComponent},
+  {path:"savedPosts/:id",component:SavedpostsComponent},
+  {path:"userApplications/:id",component:UserapplicationsComponent}
 ];
 
 @NgModule({

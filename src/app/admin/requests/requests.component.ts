@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Activity } from 'src/app/models/activity';
 import { User } from 'src/app/models/user';
@@ -12,16 +13,17 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit{
-
+  id:any;
   requestsTable!:any[];
   usersTable:User[] = [];
   activitiesTable:Activity[] = [];
-  constructor(private requestService:RequestService,private userService:UserService,private activityService:ActivityService){}
+  constructor(private activatedRoute:ActivatedRoute,private requestService:RequestService,private userService:UserService,private activityService:ActivityService){}
 
   ngOnInit(): void {
     this.getAllRequests();
     this.getAllUsers();
     this.getAllActivities();
+    this.id=this.activatedRoute.snapshot.paramMap.get('id')
   }
 
   getAllRequests(){
