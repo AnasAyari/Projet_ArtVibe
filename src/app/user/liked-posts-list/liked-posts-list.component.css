@@ -10,12 +10,8 @@
     font-size: 7rem;
     margin-top: 5rem;
     text-shadow: 0 0 10px;
-    line-height: 7rem;
-    text-align: center;
 }
 
-.applications-container{
-    background-color: white;
-    width: 60%;
-    border: 0.3rem solid black;
+ul{
+    padding: 0;
 }

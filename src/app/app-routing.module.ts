@@ -13,10 +13,14 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
 import { LikepostsComponent } from './user/likeposts/likeposts.component';
 import { SavedpostsComponent } from './user/savedposts/savedposts.component';
 import { UserapplicationsComponent } from './user/userapplications/userapplications.component';
+import { ContentDetailsComponent } from './user/content-details/content-details.component';
+import { ContentListComponent } from './user/content-list/content-list.component';
+import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-list.component';
+import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
-  {path:"admin/:id",component:DashboardComponent,
+  {path:"admin",component:DashboardComponent,
   children:[
     {path:"home",component:DashboardHomeComponent},
     {path:"activitieslist",component:ActivitiesListComponent},
@@ -31,10 +35,10 @@ const routes: Routes = [
     {path:"signup",component:SignupComponent},
     ],
   },
-  {path:"userProfile/:id",component:UserProfileComponent},
-  {path:"likedPosts/:id",component:LikepostsComponent},
-  {path:"savedPosts/:id",component:SavedpostsComponent},
-  {path:"userApplications/:id",component:UserapplicationsComponent}
+  {path:"userProfile",component:UserProfileComponent},
+  {path:"likedPosts",component:LikepostsComponent},
+  {path:"savedPosts",component:SavedpostsComponent},
+  {path:"userApplications",component:UserapplicationsComponent}
 ];
 
 @NgModule({

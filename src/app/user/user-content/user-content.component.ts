@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-content',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-content.component.css']
 })
 export class UserContentComponent {
-
+  constructor(private router:Router){}
+  
+  onClick(){
+    this.router.navigate(['/contentDetails']);
+  }
 }

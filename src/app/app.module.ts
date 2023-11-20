@@ -39,6 +39,8 @@ import { SavedpostsComponent } from './user/savedposts/savedposts.component';
 import { UserapplicationsComponent } from './user/userapplications/userapplications.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-list.component';
+import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import {MatNativeDateModule} from '@angular/material/core';
     UserProfileComponent,
     LikepostsComponent,
     SavedpostsComponent,
-    UserapplicationsComponent
+    UserapplicationsComponent,
+    LikedPostsListComponent,
+    SavedPostsListComponent
   ],
   imports: [
     BrowserModule,

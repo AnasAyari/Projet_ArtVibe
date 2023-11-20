@@ -1,8 +1,8 @@
-<div class="activity-container">
-    <label for="">Email</label>
+<div class="activity-container d-flex flex-column align-items-center">
+    <label for="" style="align-self: flex-start; margin:1rem 0;">Email</label>
     <input type="email" placeholder="Enter your e-mail..." #email>
-    <label for="">Password</label>
+    <label for="" style="align-self: flex-start; margin:1rem 0;">Password</label>
     <input type="password" placeholder="Enter your password..." #pwd>
     <button (click)="checkLogin(email.value,pwd.value)">LOG <span>IN</span></button>
-    <button (click)="logData()">LogData</button>
+    <a routerLink="/form/signup">Don't have an account ? Sing up instead.</a>
 </div>

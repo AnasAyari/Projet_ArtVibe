@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-savedposts',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./savedposts.component.css']
 })
 export class SavedpostsComponent {
-
+  constructor(private router:Router){}
+  
+  onClick(){
+    this.router.navigate(['/contentDetails']);
+  }
 }
