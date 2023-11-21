@@ -1,3 +1,4 @@
+
 <mat-toolbar class="Artvibe_Header">
     <mat-toolbar-row>
         <button (click)="sidenav.toggle();" mat-icon-button>
@@ -13,17 +14,17 @@
                     Home
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/activitieslist">
+            <a mat-list-item routerLink="/admin/{{id}}/activitieslist">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Activities List
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/userslist">
+            <a mat-list-item routerLink="/admin/{{id}}/userslist">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Users List
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/requests">
+            <a mat-list-item routerLink="/admin/{{id}}/requests">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Requests
                 </div>
@@ -35,4 +36,3 @@
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
-</div>

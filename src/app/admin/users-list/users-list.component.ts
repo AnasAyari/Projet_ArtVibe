@@ -22,6 +22,13 @@ export class UsersListComponent implements OnInit{
       console.log(data);
     })
   }
+  
+
+  deleteUserById(userID:number){
+    this.userService.deleteUserById(userID).subscribe( () => {
+      this.usersTable = this.usersTable.filter((user) => user.userID !== userID);
+    })
+  }
 
 
 

@@ -34,7 +34,7 @@ export class LoginComponent {
           this.router.navigate(["/admin/",this.users[i].userID]);
           console.log
         }else{
-          this.router.navigate(["/userProfile",this.users[i].userID]);
+          this.router.navigate(["/userProfile/",this.users[i].userID]);
         }
         
       }

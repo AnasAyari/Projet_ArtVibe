@@ -17,6 +17,7 @@ import { ContentDetailsComponent } from './user/content-details/content-details.
 import { ContentListComponent } from './user/content-list/content-list.component';
 import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-list.component';
 import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
+import { UserContentComponent } from './user/user-content/user-content.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -35,10 +36,12 @@ const routes: Routes = [
     {path:"signup",component:SignupComponent},
     ],
   },
-  {path:"userProfile",component:UserProfileComponent},
+  {path:"userProfile/:id",component:UserProfileComponent},
   {path:"likedPosts",component:LikepostsComponent},
   {path:"savedPosts",component:SavedpostsComponent},
-  {path:"userApplications",component:UserapplicationsComponent}
+  {path:"userApplications",component:UserapplicationsComponent},
+  {path:"contentList",component:ContentListComponent},
+  {path:"",redirectTo:"home",pathMatch:"full"},
 ];
 
 @NgModule({
