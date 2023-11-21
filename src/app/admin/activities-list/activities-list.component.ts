@@ -3,6 +3,7 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dial
 import { Activity } from 'src/app/models/activity';
 import { ActivityService } from 'src/app/services/activity.service';
 import { AddActivityComponent } from '../popupforms/add-activity/add-activity.component';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,11 +13,25 @@ import { AddActivityComponent } from '../popupforms/add-activity/add-activity.co
 })
 export class ActivitiesListComponent implements OnInit{
 
+  acitivityForm!: FormGroup;
+
   activitiesTable!:Activity[];
-  constructor(private activityService:ActivityService,public dialog: MatDialog){}
+  showForm: boolean=false
+  constructor(private activityService:ActivityService,public dialog: MatDialog, private fb:FormBuilder){}
 
   ngOnInit(): void {
     this.getAllActivities();
+    this.acitivityForm=this.fb.group({
+      title: ['', Validators.required],
+      date: ['', Validators.required],
+      description: ['', Validators.required],
+      category: ['', Validators.required],
+      photo: ['']
+    })
+  }
+
+  toggleForm() {
+    this.showForm = !this.showForm;
   }
 
 
