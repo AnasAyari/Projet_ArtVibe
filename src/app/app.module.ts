@@ -17,7 +17,7 @@ import { FormulaireComponent } from './dynamic/signUp-logIn/formulaire/formulair
 import { LoginComponent } from './dynamic/signUp-logIn/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './dynamic/signUp-logIn/signup/signup.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileInfoComponent } from './dynamic/profile/profile-info/profile-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './repreatable/sidenav/sidenav.component';
@@ -41,6 +41,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-list.component';
 import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
+import { TitlechangePipe } from './pipes/titlechange.pipe';
+import { PasswordStrnthPipePipe } from './pipes/password-strnth-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-lis
     SavedpostsComponent,
     UserapplicationsComponent,
     LikedPostsListComponent,
-    SavedPostsListComponent
+    SavedPostsListComponent,
+    TitlechangePipe,
+    PasswordStrnthPipePipe
   ],
   imports: [
     BrowserModule,
@@ -87,7 +91,8 @@ import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-lis
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
