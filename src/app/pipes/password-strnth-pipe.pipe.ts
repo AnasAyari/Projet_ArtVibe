@@ -7,17 +7,17 @@ export class PasswordStrnthPipePipe implements PipeTransform {
 
   transform(password: string): string {
     if (!password) {
-      return 'Weak';
+      return '';
     }
 
     const strength = this.calculatePasswordStrength(password);
 
     if (strength < 3) {
-      return 'Weak';
+      return 'Your Password is Weak';
     } else if (strength < 6) {
-      return 'Moderate';
+      return 'Your Password is Moderate';
     } else {
-      return 'Strong';
+      return 'Your Password is Strong';
     }
   }
 
