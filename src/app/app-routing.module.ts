@@ -20,7 +20,7 @@ import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-lis
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
-  {path:"admin",component:DashboardComponent,
+  {path:"admin/:id",component:DashboardComponent,
   children:[
     {path:"home",component:DashboardHomeComponent},
     {path:"activitieslist",component:ActivitiesListComponent},
