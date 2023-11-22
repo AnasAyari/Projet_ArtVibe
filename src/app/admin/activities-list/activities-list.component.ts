@@ -14,7 +14,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ActivitiesListComponent implements OnInit{
 
   acitivityForm!: FormGroup;
-
+  filteredActivities: Activity[] = [];
   activitiesTable!:Activity[];
   showForm: boolean=false
   constructor(private activityService:ActivityService,public dialog: MatDialog, private fb:FormBuilder){}
@@ -38,6 +38,7 @@ export class ActivitiesListComponent implements OnInit{
   getAllActivities(){
     this.activityService.getActivities().subscribe(data =>{
       this.activitiesTable = data;
+      this.filteredActivities = [...this.activitiesTable];
       console.log(data);
     })
   }
@@ -68,7 +69,9 @@ export class ActivitiesListComponent implements OnInit{
       this.activitiesTable = this.activitiesTable.filter((act) => act.activityID !== activityID);
     })
   }
+
+  sortActivitiesAZ() {
+    this.filteredActivities.sort((a, b) => a.title.localeCompare(b.title));
+    this.activitiesTable = this.filteredActivities;
+  }
 }
-
-
-

@@ -61,60 +61,13 @@ h1{
     display: flex;
 }
 
-.likedPosts{
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../../../assets/images/contentListBackground.png);
-    transition: all 0.2s
-}
-
-.likedPosts:hover{
-    box-shadow: 0 0 20px;
-    transition: all 0.2s
-}
-
-.likedPosts h1{
-    font-size: 5rem;
-}
-
-.savedPosts{
-    width: 34%;
+.suggestion-section{
+    width: 40%;
     border-right: 3px solid black;
-    border-left: 3px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../../../assets/images/contentListBackground.png);
-    transition: all 0.2s
 }
 
-.savedPosts:hover{
-    box-shadow: 0 0 20px;
-    transition: all 0.2s
-}
-
-.savedPosts h1{
-    font-size: 5rem;
-}
-
-.applications{
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../../../assets/images/contentListBackground.png);
-    transition: all 0.2s
-}
-
-.applications:hover{
-    box-shadow: 0 0 20px;
-    transition: all 0.2s
-}
-
-.applications h1{
-    font-size: 5rem;
+.suggestion-section h1{
+    font-size: 6rem;
 }
 
 .user-informations{
