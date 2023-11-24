@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ActivityService {
 
-  activityURL:string = "http://localhost:8088/api/v1/activities";
+  activityURL:string = "http://localhost:3000/api/v1/activities";
   constructor(private httpClient:HttpClient){}
 
   getActivities():Observable<Activity[]>{

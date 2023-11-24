@@ -1,20 +1,27 @@
 {
-    "Users": [
-        {
-            "username": "Ghzela",
-            "userID": 1,
-            "email": "ghzela@gmail.com",
-            "pwd": "123",
-            "admin": true
-        },
-        {
-            "username": "Ayar",
-            "userID": 2,
-            "email": "ayar@gmail.com",
-            "pwd": "123",
-            "admin": true
-        }
-        
-    ]
+  "Users": [
+    {
+      "id": 1,
+      "username": "Ghzela",
+      "email": "ghzela@gmail.com",
+      "pwd": "123",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "username": "Ayar",
+      "email": "ayar@gmail.com",
+      "pwd": "123",
+      "admin": true
+    },
+    {
+      "username": "Test1",
+      "pwd": "123",
+      "email": "test@gmail.com",
+      "apiId": "v1",
+      "id": 3
+    }
+  ],
+  "requests": [],
+  "activities": []
 }
-    

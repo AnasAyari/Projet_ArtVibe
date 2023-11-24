@@ -31,10 +31,10 @@ export class LoginComponent {
       }
       else if(this.users[i].email == email && this.users[i].pwd == pwd){
         if(this.users[i].admin){
-          this.router.navigate(["/admin/",this.users[i].userID]);
+          this.router.navigate(["/admin/",this.users[i].id]);
           console.log
         }else{
-          this.router.navigate(["/userProfile/",this.users[i].userID]);
+          this.router.navigate(["/userProfile/",this.users[i].id]);
         }
         
       }

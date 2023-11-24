@@ -1,5 +1,5 @@
 export class User {
-        public userID!:number;
+        public id!:number;
         public username!:string;
         public email!:string;
         public pwd!:string;

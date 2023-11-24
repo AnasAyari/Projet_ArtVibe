@@ -1,7 +1,7 @@
 import { User } from "./user"
 
 export class Activity {
-    public activityID!:number
+    public id!:number
     public title!:string
     public photo!:string
     public participantNB!:number
