@@ -15,11 +15,17 @@
       "admin": true
     },
     {
-      "username": "Test1",
-      "pwd": "123",
+      "username": "test1",
+      "pwd": "321",
       "email": "test@gmail.com",
-      "apiId": "v1",
       "id": 3
+    },
+    {
+      "admin": false,
+      "username": "test",
+      "pwd": "4",
+      "email": "test",
+      "id": 4
     }
   ],
   "requests": [],

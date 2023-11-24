@@ -3,6 +3,6 @@ export class User {
         public username!:string;
         public email!:string;
         public pwd!:string;
-        public admin!:boolean;
+        public admin:boolean = false;
         constructor(){}
 }

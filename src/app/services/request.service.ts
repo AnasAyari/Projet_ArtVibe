@@ -7,8 +7,8 @@ import { Activity } from '../models/activity';
   providedIn: 'root'
 })
 export class RequestService {
-  requestURL:string = "http://localhost:3000/api/v1/requests";
-  BaseURL:string = "http://localhost:3000/api/v1/activities";
+  requestURL:string = "http://localhost:3000/requests";
+  BaseURL:string = "http://localhost:3000/activities";
   constructor(private httpClient:HttpClient) { }
 
   getRequests():Observable<Request[]>{
