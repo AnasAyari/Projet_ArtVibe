@@ -19,6 +19,7 @@ import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-lis
 import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
 import { UserContentComponent } from './user/user-content/user-content.component';
 import { PasswordChangerPageComponent } from './admin/password-changer-page/password-changer-page.component';
+import { authGuard } from './guards/guard.guard';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
