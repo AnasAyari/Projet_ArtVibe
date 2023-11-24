@@ -28,6 +28,18 @@ h2{
     background-color: black;
 }
 
+.photo-btn{
+    display: flex;
+    position: absolute;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    bottom: 1rem;
+    right: 24rem;
+    height: 2.35rem;
+    background-color: black;
+    width: 15rem;
+}
+
 .userProfile-container{
     width: 100%;
     min-height: 90vh;
