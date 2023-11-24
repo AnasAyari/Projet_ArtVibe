@@ -13,13 +13,13 @@ export class AuthService implements OnInit{
       this.userservice.getUsersList().subscribe(data => {
         this.users=data}
         );
-        
+
       }
 
   private authenticated = false;
   public login() {
     console.log(this.users);
-    
+
   }
   public logout() {
     this.authenticated = false;
@@ -52,16 +52,3 @@ export class AuthService implements OnInit{
         return this.authenticated
       }
   }
-  //       if(this.users[i].admin){
-  //         this.router.navigate(["/admin/",this.users[i].userID]);
-  //         console.log
-  //       }else{
-  //         this.router.navigate(["/userProfile/",this.users[i].userID]);
-  //       }
-        
-  //     }
-  //     else{
-  //       console.log("WRONG PASSWORD!!!");
-  //     }
-  //   })
-  // }
