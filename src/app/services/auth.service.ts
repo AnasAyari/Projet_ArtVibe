@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 })
 export class AuthService implements OnInit{
   constructor(private userservice:UserService,){}
-  users!: User[];
+  users: User[] = [];
 
   ngOnInit(): void {
       this.userservice.getUsersList().subscribe(data => {
@@ -42,9 +42,13 @@ export class AuthService implements OnInit{
       else if(this.users[i].email == email && this.users[i].pwd == pwd){
         if (this.users[i].admin){
           this.isAdmin=true
+        }else{
+          this.isAdmin=false
         }
         this.authenticated=true
       }
+        console.log(this.authenticated);
+        console.log(this.isAdmin);
         return this.authenticated
       }
   }

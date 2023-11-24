@@ -3,6 +3,6 @@
     <input type="email" placeholder="Enter your e-mail..." #email>
     <label for="" style="align-self: flex-start; margin:1rem 0;">Password</label>
     <input type="password" placeholder="Enter your password..." #pwd>
-    <button (click)="test()">LOG <span>IN</span></button>
+    <button (click)="login(email.value,pwd.value)">LOG <span>IN</span></button>
     <a routerLink="/form/signup">Don't have an account ? Sing up instead.</a>
 </div>
