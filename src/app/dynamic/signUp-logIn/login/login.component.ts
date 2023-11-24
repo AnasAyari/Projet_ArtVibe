@@ -8,18 +8,18 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  
-  constructor(private authservice:AuthService,private router:Router){}
-  ngOnInit(): void { 
-  }
-  
-  login(email:string,password:string){
-    if (this.authservice.checkLogin(email,password) && this.authservice.isAdmin){
-      console.log("success")
-    }
 
+  constructor(private authservice:AuthService,private router:Router){}
+  ngOnInit(): void {
+    this.authservice.ngOnInit();
   }
-  test(){
-    this.authservice.login();
+  login(email:string,password:string){
+    this.authservice.checkLogin(email,password)
+    if (this.authservice.isAdmin){
+      this.router.navigate(['admin/home']);
+    }else{
+      this.router.navigate(['user/userProfile ']);
+    }
   }
+
 }
