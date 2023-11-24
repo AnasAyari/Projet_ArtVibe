@@ -18,6 +18,7 @@ import { ContentListComponent } from './user/content-list/content-list.component
 import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-list.component';
 import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
 import { UserContentComponent } from './user/user-content/user-content.component';
+import { PasswordChangerPageComponent } from './admin/password-changer-page/password-changer-page.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
     {path:"userslist",component:UsersListComponent},
     {path:"requests",component:RequestsComponent},
     {path:"",redirectTo:"home",pathMatch:"full"},
+    {path:"PasswordChangingPage",component:PasswordChangerPageComponent}
     ]
   },
   {path:"form",component:FormulaireComponent,

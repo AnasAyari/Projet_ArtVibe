@@ -10,7 +10,7 @@
     <mat-sidenav #sidenav class="dashboard-sidenav">
         <mat-nav-list>
             <a mat-list-item routerLink="/admin/home" >
-                <div routerLinkActive="dashboard-sidnav-i">
+                <div routerLinkActive="dashboard-sidnav-i" [routerLinkActiveOptions]="{exact: true}">
                     Home
                 </div>
             </a>
@@ -27,6 +27,11 @@
             <a mat-list-item routerLink="/admin/{{id}}/requests">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Requests
+                </div>
+            </a>
+            <a mat-list-item routerLink="/admin/{{id}}/PasswordChangingPage">
+                <div routerLinkActive="dashboard-sidnav-i">
+                    Change Password
                 </div>
             </a>
         </mat-nav-list>
