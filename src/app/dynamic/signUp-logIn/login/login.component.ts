@@ -16,12 +16,14 @@ export class LoginComponent {
     this.authservice.ngOnInit();
   }
   login(email:string,password:string){
-    this.authservice.checkLogin(email,password);
-    if (this.authservice.isAdmin){
-      this.router.navigate(['admin/home']);
-    }else{
-      this.router.navigate(['user/userProfile ']);
+    if(this.authservice.checkLogin(email,password)){
+      if (this.authservice.isAdmin){
+        this.router.navigate(['admin/home']);
+      }else{
+        this.router.navigate(['user/userProfile']);
+      }
     }
+    
   }
 
 

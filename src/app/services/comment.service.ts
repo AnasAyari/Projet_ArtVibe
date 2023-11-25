@@ -14,4 +14,10 @@ export class CommentService {
   getComments():Observable<Comment[]>{
     return this.httpClient.get<Comment[]>(`${this.commentURL}`)
   }
+  getCommentById(commentID:number){
+    return this.httpClient.get<Comment>(`${this.commentURL}/${commentID}`);
+  }
+  saveComment(comment:Comment){
+    return this.httpClient.post<any>(`${this.commentURL}`,comment);
+  }
 }
