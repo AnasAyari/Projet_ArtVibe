@@ -8,17 +8,20 @@ import { Activity } from '../models/activity';
 })
 export class RequestService {
   requestURL:string = "http://localhost:3000/requests";
-  BaseURL:string = "http://localhost:3000/activities";
+  activityURL:string = "http://localhost:3000/activities";
   constructor(private httpClient:HttpClient) { }
 
   getRequests():Observable<Request[]>{
-    return this.httpClient.get<Request[]>(this.requestURL);
+    return this.httpClient.get<Request[]>(`${this.requestURL}`);
   }
   deleteRequest(requestID:number):Observable<Request>{
     return this.httpClient.delete<Request>(`${this.requestURL}/${requestID}`);
   }
   addParticipant(activityID:number,activity:Activity){
-    return this.httpClient.put<Activity>(`${this.BaseURL}/${activityID}`,activity);
+    return this.httpClient.put<Activity>(`${this.activityURL}/${activityID}`,activity);
+  }
+  saveRequest(request:Request){
+    return this.httpClient.post<Request>(`${this.requestURL}`,request)
   }
 
 }

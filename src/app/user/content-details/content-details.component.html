@@ -4,22 +4,33 @@
     </div>
     <div class="postDetails-container d-flex flex-column justify-content-center align-items-center">
         <div class="title">
-            <h1>TITLE TITLE</h1>
+            <h1>{{activity.title}}</h1>
         </div>
         <div class="uploader d-flex flex-column">
             <img src="" alt="profile pic">
             <h1>Uploader</h1>
         </div>
-        <h2 class="caption">Post caption</h2>
+        <h2 class="caption">{{activity.description}}</h2>
         <p class="date" style="font-size: 1.5rem; color: rgba(0, 0, 0, 0.4);">Date of post</p>
         <div class="participants-section">
+            
             <h3 style="font-size: 1.4rem; font-weight: bold;">Participants</h3>
             <ul>
-                <li>participant</li>
-                <li>participant</li>
-                <li>participant</li>
+                <li *ngFor="let p of activity.participant">
+                    {{p.id}}
+                </li>
             </ul>
         </div>
         <p class="description-para"></p>
+        <button (click)="toggleForm()">
+            Request Participation
+        </button>
+        <div *ngIf="showForm" class="requestForm-container">
+            <form [formGroup]="requestForm" class="form-group" (ngSubmit)="sendParticipationRequest()">
+            <label for="description">Why do you want to participate in this activity ?</label>
+            <textarea id="description" formControlName="description"class="form-control"></textarea>
+            <button type="submit"class="form-contro" (click)="toggleForm();sendParticipationRequest()">Submit</button>
+            </form>
+        </div>
     </div>
 </div>

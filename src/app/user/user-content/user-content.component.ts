@@ -82,6 +82,6 @@ export class UserContentComponent implements OnInit{
     this.activity.requests.push()
   }
   onClick(){
-    this.router.navigate([`/contentDetails/${this.activity.id}`]);
+    this.router.navigate([`user/${this.activity.id}/contentDetails/${this.id}/${this.activity.id}`]);
   }
 }

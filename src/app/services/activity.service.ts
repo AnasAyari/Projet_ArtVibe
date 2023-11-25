@@ -20,7 +20,7 @@ export class ActivityService {
   }
 
   saveActivity(activity:Activity){
-    return this.httpClient.post<Activity[]>(`${this.activityURL}`,activity);
+    return this.httpClient.post<Activity>(`${this.activityURL}`,activity);
   }
   updateActivity(activityID:number,activity:Activity):Observable<Activity>{
     return this.httpClient.put<Activity>(`${this.activityURL}/${activityID}`,activity);

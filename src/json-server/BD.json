@@ -12,7 +12,7 @@
       "id": 2,
       "username": "Ayar",
       "email": "ayar@gmail.com",
-      "pwd": "123",
+      "pwd": "testtest",
       "participations": 0,
       "admin": true
     },
@@ -147,6 +147,12 @@
       "userID": 1,
       "message": "ayar mta3 el magazine",
       "id": 19
+    },
+    {
+      "activityID": 2,
+      "userID": 1,
+      "message": "test",
+      "id": 20
     }
   ],
   "activities": [
@@ -155,7 +161,41 @@
       "date": "2023-11-24",
       "description": "description test",
       "category": "formation",
-      "participantNB": 0,
+      "participantNB": 10,
+      "participant": [
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        },
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        },
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        },
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        }
+      ],
       "photo": "",
       "likeusers": [
         {
@@ -166,7 +206,14 @@
           "participations": 0,
           "admin": true
         },
-        null
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        }
       ],
       "comments": [
         {
@@ -214,6 +261,105 @@
       ],
       "requests": [],
       "id": 1
+    },
+    {
+      "title": "Formation c#",
+      "date": "2023-11-24",
+      "description": "description test",
+      "category": "formation",
+      "participantNB": 10,
+      "participant": [
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        },
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        },
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        },
+        {
+          "id": 1,
+          "username": "Ghzela",
+          "email": "ghzela@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        }
+      ],
+      "photo": "",
+      "likeusers": [
+        {
+          "id": 2,
+          "username": "Ayar",
+          "email": "ayar@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        }
+      ],
+      "comments": [
+        {
+          "message": "test1",
+          "activityID": 2,
+          "userID": 1,
+          "id": 1
+        },
+        {
+          "message": "test2",
+          "activityID": 2,
+          "userID": 5,
+          "id": 2
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "test3",
+          "id": 15
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "test3",
+          "id": 16
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "Ayar mta3 el manga",
+          "id": 17
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "azea",
+          "id": 18
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "ayar mta3 el magazine",
+          "id": 19
+        }
+      ],
+      "requests": [],
+      "id": 3
     }
-  ]
+  ],
+  "requests": []
 }

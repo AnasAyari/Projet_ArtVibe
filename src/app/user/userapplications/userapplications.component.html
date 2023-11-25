@@ -1,5 +1,5 @@
 <div class="section-container d-flex flex-column align-items-center">
-    <h1 class="section-title">Participation Applications</h1>
+    <h1 class="section-title">Participations</h1>
     <div class="applications-container">
         <table class="table table-striped">
             <thead>
@@ -10,50 +10,19 @@
                 </tr>
             </thead>
             <tbody >
-                <tr>
-                    <td>
-                        title
-                    </td>
-                    <td>
-                        xx/xx/xxxx
-                    </td>
-                    <td>
-                        Approved
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        title
-                    </td>
-                    <td>
-                        xx/xx/xxxx
-                    </td>
-                    <td>
-                        test
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        xx/xx/xxxx
-                    </td>
-                    <td>
-                        Approved
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                    <td>
-                        test
-                    </td>
-                </tr>
+                <ng-container *ngFor="let ua of activitiesTable">
+                    <tr *ngIf="checkValidation(ua.participant)">
+                        <td>
+                            {{ua.title}}
+                        </td>
+                        <td>
+                            {{ua.date}}
+                        </td>
+                        <td>
+                            Approved
+                        </td>
+                    </tr>
+                </ng-container>
             </tbody>
         </table>
     </div>

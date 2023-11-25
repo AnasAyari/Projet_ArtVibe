@@ -23,7 +23,9 @@ export class UserService {
   saveUser(user:User){
     return this.httpClient.post(`${this.usersURL}`,user);
   }
-
+  updateUser(userID:number,user:User){
+    return this.httpClient.put(`${this.usersURL}/${userID}`,user);
+  }
   deleteUserById(userID:number){
     return this.httpClient.delete(`${this.usersURL}/${userID}`);
   }

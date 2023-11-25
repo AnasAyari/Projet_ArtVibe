@@ -10,7 +10,7 @@ import { ActivityService } from 'src/app/services/activity.service';
 })
 export class ContentListComponent implements OnInit{
   id:any;
-  activitiesTab!:any[]
+  activitiesTable!:any[]
 
   constructor(private activityService:ActivityService,private router:Router,private activatedRoute:ActivatedRoute){}
   
@@ -21,8 +21,8 @@ export class ContentListComponent implements OnInit{
 
   getAllActivities(){
     this.activityService.getActivities().subscribe(data => {
-      this.activitiesTab = data;
-      console.log(this.activitiesTab);
+      this.activitiesTable = data;
+      console.log(this.activitiesTable);
       
     })
   }

@@ -29,12 +29,15 @@ export class RequestsComponent implements OnInit{
   getAllRequests(){
     this.requestService.getRequests().subscribe(data => {
       this.requestsTable = data;
+      console.log(this.requestsTable);
       
     })
   }
   getAllUsers(){
     this.userService.getUsersList().subscribe(data => {
       this.usersTable = data;
+      console.log(this.usersTable);
+      
     })
   }
   //GET ALL ACTIVITIES
@@ -63,27 +66,39 @@ export class RequestsComponent implements OnInit{
     return null;
   }
   //DELETE A REQUEST AND UPDATE WITHOUT REFRESH
-  deleteRequest(requestID:number){
+  deleteRequest(requestID:number,activityID:number){
     this.requestService.deleteRequest(requestID).subscribe( () => {
       this.requestsTable = this.requestsTable.filter((req) => req.id!== requestID);
-      console.log("request deleted!!!");
+      
+      console.log("request deleted!!! from dashboard");
     });
+    this.activityService.getActivityById(activityID).subscribe(data => {
+      data.requests = data.requests.filter((req) => req.id!== requestID);
+      this.activityService.updateActivity(activityID,data).subscribe( data => {
+        console.log(data);
+      });
+      console.log("request deleted!!! from activity");
+      
+      
+    })
+    
   }
   //ACCEPT A PARTICIPATION REQUEST AND ADD A USER TO AN ACTIVITIES PARTICIPANTS LIST
   acceptRequest(userID:number,activityID:number,requestID:number){
-    this.getRequestActivity(activityID).participantNB += 1;
-    this.getRequestActivity(activityID).participant.push(this.getRequestUser(userID));
-    console.log(this.getRequestActivity(activityID));
-    
-    this.requestService.addParticipant(activityID,this.getRequestActivity(activityID)).subscribe(
-      data => {
+    this.activityService.getActivityById(activityID).subscribe(data => {
+      data.participant.push(this.getRequestUser(userID));
+      data.participantNB += 1;
+      data.requests = data.requests.filter((req) => req.id!== requestID);
+      this.activityService.updateActivity(activityID,data).subscribe(data =>{
         console.log(data);
-      }
-    );
+        
+      })
+    });
+    
+    this.requestService.deleteRequest(requestID).subscribe(() => {
+      this.requestsTable = this.requestsTable.filter((req) => req.id!== requestID);
+    })
   }
 
-  onAccept(userID:number,activityID:number,requestID:number){
-    this.acceptRequest(userID,activityID,requestID);
-    this.deleteRequest(requestID);
-  }
+  
 }

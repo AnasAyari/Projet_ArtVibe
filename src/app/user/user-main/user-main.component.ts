@@ -12,9 +12,6 @@ export class UserMainComponent implements OnInit{
   constructor(private router:Router,private activatedRoute:ActivatedRoute,private authService:AuthService){}
   ngOnInit(): void {
     this.id=this.activatedRoute.snapshot.paramMap.get('id')
-    
     console.log(this.id);
-    
-    
   }
 }

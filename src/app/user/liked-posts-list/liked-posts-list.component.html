@@ -2,9 +2,11 @@
     <h1 class="section-title">Liked Posts</h1>
     <div>
         <ul style="list-style: none;margin-left: 10rem;">
-            <li><app-likeposts></app-likeposts></li>
-            <li><app-likeposts></app-likeposts></li>
-            <li><app-likeposts></app-likeposts></li>
+            <ng-container *ngFor="let act of activitiesTable">
+                <li >
+                    <app-user-content [activity]="act" *ngIf="checkValidation(act.likeusers)"></app-user-content>
+                </li>
+            </ng-container>
         </ul>
     </div>
 </div>

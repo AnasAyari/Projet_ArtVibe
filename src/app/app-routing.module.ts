@@ -43,12 +43,12 @@ const routes: Routes = [
   {path:"user/:id",component:UserMainComponent,
     children:[
       {path:"userProfile/:id",component:UserProfileComponent},
-      {path:"likedPosts/:id",component:LikepostsComponent},
+      {path:"likedPosts/:id",component:LikedPostsListComponent},
       {path:"savedPosts/:id",component:SavedpostsComponent},
       {path:"userApplications/:id",component:UserapplicationsComponent},
       {path:"contentList/:id",component:ContentListComponent},
-      {path:"contentDetails/:id",component:ContentDetailsComponent},
-      {path:"PasswordChangingPage",component:PasswordChangerPageComponent},
+      {path:"contentDetails/:userID/:activityID",component:ContentDetailsComponent},
+      {path:"PasswordChangingPage/:id",component:PasswordChangerPageComponent},
       {path:"",redirectTo:"userProfile",pathMatch:"full"}, 
     ]
   },

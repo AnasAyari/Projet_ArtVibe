@@ -19,11 +19,8 @@
                 <img src="" alt="profile pic">
                 <h1>{{username}}</h1>
             </div>
-            <div>
-                <p style="width: 30rem;margin-left: 2rem;">A silly little bio for a silly little person that doesnt care about the economical state of the 
-                    world right now and just shares cat memes on the internet</p>
-                <button class="btn btn-dark bio-btn">Edit you bio</button>
-                <button class="btn btn-dark pass-btn">Change your password</button>
+            <div class="d-flex;">
+                <button class="btn btn-dark pass-btn" (click)="navigateToChangePassword('user/'+id+'/PasswordChangingPage/'+id)">Change your password</button>
                 <input type="file" class="btn btn-dark photo-btn">  
             </div>       
         </div>

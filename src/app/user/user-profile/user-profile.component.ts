@@ -18,7 +18,7 @@ export class UserProfileComponent implements OnInit{
     })
   }
 
-  onClick(path:string){
+  navigateToChangePassword(path:string){
     this.router.navigate([path]);
   }
 }
