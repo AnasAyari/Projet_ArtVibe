@@ -5,6 +5,7 @@
       "username": "Ghzela",
       "email": "ghzela@gmail.com",
       "pwd": "123",
+      "participations": 0,
       "admin": true
     },
     {
@@ -12,24 +13,195 @@
       "username": "Ayar",
       "email": "ayar@gmail.com",
       "pwd": "123",
+      "participations": 0,
       "admin": true
-    },
-    {
-      "username": "test1",
-      "pwd": "321",
-      "email": "test@gmail.com",
-      "id": 3
     },
     {
       "admin": false,
       "username": "test",
       "pwd": "4",
+      "participations": 7,
       "email": "test",
       "id": 4
+    },
+    {
+      "admin": false,
+      "username": "Khadija",
+      "pwd": ":3",
+      "participations": 8,
+      "email": "Tina@gmail.com",
+      "id": 5
     }
   ],
-  "requests": [],
+  "comments": [
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "aze",
+      "id": 1
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 2
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "azeae",
+      "id": 3
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "azeaze",
+      "id": 4
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 5
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 6
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 7
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 8
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 9
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test4",
+      "id": 10
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 11
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 12
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 13
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 14
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 15
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "test3",
+      "id": 16
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "Ayar mta3 el manga",
+      "id": 17
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "azea",
+      "id": 18
+    }
+  ],
   "activities": [
-    
+    {
+      "title": "Formation c#",
+      "date": "2023-11-24",
+      "description": "description test",
+      "category": "formation",
+      "participantNB": 0,
+      "photo": "",
+      "likeusers": [
+        {
+          "id": 2,
+          "username": "Ayar",
+          "email": "ayar@gmail.com",
+          "pwd": "123",
+          "participations": 0,
+          "admin": true
+        },
+        null
+      ],
+      "comments": [
+        {
+          "message": "test1",
+          "activityID": 2,
+          "userID": 1,
+          "id": 1
+        },
+        {
+          "message": "test2",
+          "activityID": 2,
+          "userID": 5,
+          "id": 2
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "test3",
+          "id": 15
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "test3",
+          "id": 16
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "Ayar mta3 el manga",
+          "id": 17
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "azea",
+          "id": 18
+        }
+      ],
+      "requests": [],
+      "id": 1
+    }
   ]
 }

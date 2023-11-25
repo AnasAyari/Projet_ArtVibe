@@ -26,7 +26,12 @@ export class ActivitiesListComponent implements OnInit{
       date: ['', Validators.required],
       description: ['', Validators.required],
       category: ['', Validators.required],
-      photo: ['']
+      participantNB: [0,],
+      likeNumber: [0,],
+      photo: [''],
+      likeusers:this.fb.array([]),
+      comments: this.fb.array([]),
+      requests: this.fb.array([]),
     })
   }
 
@@ -73,5 +78,13 @@ export class ActivitiesListComponent implements OnInit{
   sortActivitiesAZ() {
     this.filteredActivities.sort((a, b) => a.title.localeCompare(b.title));
     this.activitiesTable = this.filteredActivities;
+  }
+
+  addAct(){
+    this.activityService.saveActivity(this.acitivityForm.value).subscribe(data=>{
+      console.log(data);
+      
+    })
+    
   }
 }

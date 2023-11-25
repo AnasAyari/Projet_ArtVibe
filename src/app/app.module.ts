@@ -44,6 +44,7 @@ import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-lis
 import { TitlechangePipe } from './pipes/titlechange.pipe';
 import { PasswordStrnthPipePipe } from './pipes/password-strnth-pipe.pipe';
 import { PasswordChangerPageComponent } from './admin/password-changer-page/password-changer-page.component';
+import { UserMainComponent } from './user/user-main/user-main.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { PasswordChangerPageComponent } from './admin/password-changer-page/pass
     SavedPostsListComponent,
     TitlechangePipe,
     PasswordStrnthPipePipe,
-    PasswordChangerPageComponent
+    PasswordChangerPageComponent,
+    UserMainComponent
   ],
   imports: [
     BrowserModule,

@@ -38,6 +38,8 @@ export class AuthService implements OnInit{
       }
       if(i==this.users.length){
         console.log("user doesnt exist");
+        this.authenticated=false
+        return this.authenticated;
       }
       else if(this.users[i].email == email && this.users[i].pwd == pwd){
         if (this.users[i].admin){
@@ -46,9 +48,10 @@ export class AuthService implements OnInit{
           this.isAdmin=false
         }
         this.authenticated=true
+        return this.authenticated;
+      }else{
+        this.authenticated=false;
+        return this.authenticated;
       }
-        console.log(this.authenticated);
-        console.log(this.isAdmin);
-        return this.authenticated
       }
   }

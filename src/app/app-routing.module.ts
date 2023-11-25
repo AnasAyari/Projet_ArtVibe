@@ -20,10 +20,11 @@ import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-lis
 import { UserContentComponent } from './user/user-content/user-content.component';
 import { PasswordChangerPageComponent } from './admin/password-changer-page/password-changer-page.component';
 import { authGuard } from './guards/guard.guard';
+import { UserMainComponent } from './user/user-main/user-main.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
-  {path:"admin/:id",component:DashboardComponent,
+  {path:"admin",component:DashboardComponent,
   children:[
     {path:"home",component:DashboardHomeComponent},
     {path:"activitieslist",component:ActivitiesListComponent},
@@ -39,11 +40,17 @@ const routes: Routes = [
     {path:"signup",component:SignupComponent},
     ],
   },
-  {path:"userProfile/:id",component:UserProfileComponent},
-  {path:"likedPosts",component:LikepostsComponent},
-  {path:"savedPosts",component:SavedpostsComponent},
-  {path:"userApplications",component:UserapplicationsComponent},
-  {path:"contentList",component:ContentListComponent},
+  {path:"user/:id",component:UserMainComponent,
+    children:[
+      {path:"userProfile/:id",component:UserProfileComponent},
+      {path:"likedPosts",component:LikepostsComponent},
+      {path:"savedPosts",component:SavedpostsComponent},
+      {path:"userApplications",component:UserapplicationsComponent},
+      {path:"contentList/:id",component:ContentListComponent},
+      {path:"PasswordChangingPage",component:PasswordChangerPageComponent},
+      {path:"",redirectTo:"userProfile",pathMatch:"full"}, 
+    ]
+  },
   {path:"",redirectTo:"home",pathMatch:"full"},
 ];
 
