@@ -3,13 +3,13 @@
         <div class="activity-part">
             <div class="activity-header">
                     <div>
-                        <h1>TITLE TITLE</h1>
-                        <p>xx/xx/xxxx</p>
+                        <h1>{{activity.title}}</h1>
+                        <p>{{activity.date}}</p>
                     </div>
             </div>
             <div class="activity-section">
                 <div class="photo-section">
-                    <img src="" alt="taswiret el post">
+                    <img [src]="activity.photo" alt="taswiret el post">
                 </div>
                 <div class="description-section">
                     <h1>MORE DETAILS</h1>
@@ -17,45 +17,24 @@
                 </div>
             </div>
             <div class="activity-footer">
-                <i class="fa-regular fa-heart fa-2xl"></i>
-                <input type="text" placeholder="Write a comment...">
-                <i class="fa-regular fa-star fa-2xl"></i>
+                <i class="fa-regular fa-heart fa-2xl" (click)="Like(activity.id)"></i>
+                <input type="text" placeholder="Write a comment..."  #message>
+                <i class="far fa-comment-alt fa-2xl" (click)="Comment(activity.id,message.value)"></i>
             </div>
         </div>
         <div class="comment-section">
             <div class="comment-banner">
-                <p>COMMENTS</p></div>
+                <p>COMMENTS</p>
+            </div>
             <div class="comment-list">
                 <ul class="list-group">
-                    <li class="list-group-item">
+                    <li class="list-group-item" *ngFor="let c of activity.comments">
                         <div>
                             <img src="" alt="">
-                            <h3>Foulen</h3>
+                            <h3>{{getUserById(c.userID)?.username}}</h3>
                         </div>
-                        <p> Malla post sa7bi</p>
+                        <p>{{c.message}}</p>
                     </li>
-                    <li class="list-group-item">
-                        <div>
-                            <img src="" alt="">
-                            <h3>Foulen</h3>
-                        </div>
-                        <p> Malla post sa7bi</p>
-                    </li>
-                    <li class="list-group-item">
-                        <div>
-                            <img src="" alt="">
-                            <h3>Foulen</h3>
-                        </div>
-                        <p> Malla post sa7bi</p>
-                    </li>
-                    <li class="list-group-item">
-                        <div>
-                            <img src="" alt="">
-                            <h3>Foulen</h3>
-                        </div>
-                        <p> Malla post sa7bi</p>
-                    </li>
-                    
                 </ul>
             </div>
         </div>

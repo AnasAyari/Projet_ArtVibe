@@ -1,7 +1,7 @@
 <div class="contentList-container">
     <ul style="list-style: none;margin-left: 10rem;">
         <li *ngFor="let act of activitiesTab">
-            <app-user-content></app-user-content>
+            <app-user-content [activity]="act"></app-user-content>
         </li>
     </ul>
 </div>

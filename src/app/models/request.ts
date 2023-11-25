@@ -1,5 +1,5 @@
 export class Request {
-    public requestID!:number;
+    public id!:number;
     public description!:string;
     public requestUserID!:number;
     public requestActivityID!:number;

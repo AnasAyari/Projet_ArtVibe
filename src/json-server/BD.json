@@ -1,0 +1,35 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "username": "Ghzela",
+      "email": "ghzela@gmail.com",
+      "pwd": "123",
+      "admin": true
+    },
+    {
+      "id": 2,
+      "username": "Ayar",
+      "email": "ayar@gmail.com",
+      "pwd": "123",
+      "admin": true
+    },
+    {
+      "username": "test1",
+      "pwd": "321",
+      "email": "test@gmail.com",
+      "id": 3
+    },
+    {
+      "admin": false,
+      "username": "test",
+      "pwd": "4",
+      "email": "test",
+      "id": 4
+    }
+  ],
+  "requests": [],
+  "activities": [
+    
+  ]
+}

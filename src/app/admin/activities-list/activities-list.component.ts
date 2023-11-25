@@ -66,7 +66,7 @@ export class ActivitiesListComponent implements OnInit{
 
   deleteActivityById(activityID:number){
     this.activityService.deleteActivity(activityID).subscribe( () => {
-      this.activitiesTable = this.activitiesTable.filter((act) => act.activityID !== activityID);
+      this.activitiesTable = this.activitiesTable.filter((act) => act.id !== activityID);
     })
   }
 

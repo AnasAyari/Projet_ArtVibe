@@ -45,9 +45,9 @@ export class RequestsComponent implements OnInit{
     })
   }
   //GET A USER BY ID
-  getRequestUser(userID:number):any{
+  getRequestUser(id:number):any{
     for (let i = 0; i < this.usersTable.length; i++) {
-      if (this.usersTable[i].userID == userID) {
+      if (this.usersTable[i].id == id) {
           return this.usersTable[i];
       }
     }
@@ -56,7 +56,7 @@ export class RequestsComponent implements OnInit{
   //GET A USER BY ID
   getRequestActivity(activityID:number):any{
     for (let i = 0; i < this.activitiesTable.length; i++) {
-      if (this.activitiesTable[i].activityID == activityID) {
+      if (this.activitiesTable[i].id == activityID) {
           return this.activitiesTable[i];
       }
     }
@@ -65,7 +65,7 @@ export class RequestsComponent implements OnInit{
   //DELETE A REQUEST AND UPDATE WITHOUT REFRESH
   deleteRequest(requestID:number){
     this.requestService.deleteRequest(requestID).subscribe( () => {
-      this.requestsTable = this.requestsTable.filter((req) => req.requestID !== requestID);
+      this.requestsTable = this.requestsTable.filter((req) => req.id!== requestID);
       console.log("request deleted!!!");
     });
   }

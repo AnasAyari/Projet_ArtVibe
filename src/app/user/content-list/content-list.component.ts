@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Activity } from 'src/app/models/activity';
 import { ActivityService } from 'src/app/services/activity.service';
 
@@ -8,13 +9,14 @@ import { ActivityService } from 'src/app/services/activity.service';
   styleUrls: ['./content-list.component.css']
 })
 export class ContentListComponent implements OnInit{
+  id:any;
+  activitiesTab!:any[]
 
-  activitiesTab!:Activity[]
-
-  constructor(private activityService:ActivityService){}
+  constructor(private activityService:ActivityService,private router:Router,private activatedRoute:ActivatedRoute){}
   
   ngOnInit(): void {
     this.getAllActivities();
+    this.id=this.activatedRoute.snapshot.paramMap.get('id')
   }
 
   getAllActivities(){
