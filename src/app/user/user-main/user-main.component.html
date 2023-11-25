@@ -10,39 +10,34 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav class="dashboard-sidenav">
         <mat-nav-list>
-            <a mat-list-item routerLink="/user/{{id}}/userProfile" >
-                <div routerLinkActive="dashboard-sidnav-i" [routerLinkActiveOptions]="{exact: true}">
-                    Home
-                </div>
-            </a>
-            <a mat-list-item routerLink="/user/{{id}}/contentList" >
+            <a mat-list-item routerLink="/user/{{id}}/contentList/{{id}}" >
                 <div routerLinkActive="dashboard-sidnav-i" [routerLinkActiveOptions]="{exact: true}">
                     Content 
                 </div>
             </a>
-            <a mat-list-item routerLink="user/{{id}}/likedPosts">
+            <a mat-list-item routerLink="likedPosts/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
-                    Liked Posts
+                    Liked posts
                 </div>
             </a>
-            <a mat-list-item routerLink="/user/{{id}}/savedPosts">
+            <a mat-list-item routerLink="/user/{{id}}/savedPosts/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
-                    savedPosts
+                    Saved posts
                 </div>
             </a>
-            <a mat-list-item routerLink="/user/{{id}}/userApplications">
+            <a mat-list-item routerLink="/user/{{id}}/userApplications/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
-                    userApplications
+                    Applications
                 </div>
             </a>
-            <a mat-list-item routerLink="/user/{{id}}/PasswordChangingPage">
+            <a mat-list-item routerLink="/user/{{id}}/userProfile/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
-                    Change Password
+                    Profile
                 </div>
             </a>
         </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content style="height:100%;width:100%;scroll-behavior: smooth;">
+    <mat-sidenav-content style="height:100%;width:100%;">
         <!--######################ROUTER OUTLET######################-->
         <router-outlet></router-outlet>
     </mat-sidenav-content>

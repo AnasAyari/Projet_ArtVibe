@@ -15,6 +15,8 @@ export class AuthService implements OnInit{
         );
 
       }
+  
+      userID!:number
 
   private authenticated = false;
   public login() {
@@ -42,15 +44,13 @@ export class AuthService implements OnInit{
         return this.authenticated;
       }
       else if(this.users[i].email == email && this.users[i].pwd == pwd){
+        this.userID=this.users[i].id;
         if (this.users[i].admin){
           this.isAdmin=true
-        }else{
-          this.isAdmin=false
         }
         this.authenticated=true
         return this.authenticated;
       }else{
-        this.authenticated=false;
         return this.authenticated;
       }
       }

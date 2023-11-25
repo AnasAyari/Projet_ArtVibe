@@ -141,6 +141,12 @@
       "userID": 1,
       "message": "azea",
       "id": 18
+    },
+    {
+      "activityID": 1,
+      "userID": 1,
+      "message": "ayar mta3 el magazine",
+      "id": 19
     }
   ],
   "activities": [
@@ -198,6 +204,12 @@
           "userID": 1,
           "message": "azea",
           "id": 18
+        },
+        {
+          "activityID": 1,
+          "userID": 1,
+          "message": "ayar mta3 el magazine",
+          "id": 19
         }
       ],
       "requests": [],
