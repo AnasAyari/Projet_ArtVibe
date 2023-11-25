@@ -47,7 +47,7 @@ const routes: Routes = [
       {path:"savedPosts",component:SavedpostsComponent},
       {path:"userApplications",component:UserapplicationsComponent},
       {path:"contentList/:id",component:ContentListComponent},
-      {path:"PasswordChangingPage",component:PasswordChangerPageComponent},
+      {path:"PasswordChangingPage/:id",component:PasswordChangerPageComponent},
       {path:"",redirectTo:"userProfile",pathMatch:"full"}, 
     ]
   },

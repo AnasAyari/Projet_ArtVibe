@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 })
 export class AuthService implements OnInit{
   constructor(private userservice:UserService,){}
-  users: User[] = [];
+  users!: User[];
 
   ngOnInit(): void {
       this.userservice.getUsersList().subscribe(data => {
