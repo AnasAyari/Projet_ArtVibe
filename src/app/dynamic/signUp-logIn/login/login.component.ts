@@ -20,7 +20,7 @@ export class LoginComponent {
       if (this.authservice.isAdmin){
         this.router.navigate(['admin/home']);
       }else{
-        this.router.navigate(['user/userProfile']);
+        this.router.navigate([`user/${this.authservice.userID}/userProfile/${this.authservice.userID}`]);
       }
     }
     

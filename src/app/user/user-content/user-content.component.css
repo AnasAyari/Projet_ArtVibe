@@ -125,7 +125,8 @@ input{
 
 .comment-list{
     border-top: 3.5px solid black;
-    height: 85%;
+    max-height: 85%;
+    overflow-y: auto;
 }
 
 .comment-list ul{
