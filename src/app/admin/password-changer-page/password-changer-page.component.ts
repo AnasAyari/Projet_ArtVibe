@@ -51,7 +51,7 @@ export class PasswordChangerPageComponent implements OnInit{
     this.userService.getUsersById(this.id).subscribe(data => {
       this.user = data;
       console.log(this.user);
-      this.user.pwd = this.passwordForm.value.newPassword
+      this.user.pwd = this.passwordForm.value.newPassword;
         this.userService.updateUser(this.id,this.user).subscribe(data => {
           console.log(data);
         });

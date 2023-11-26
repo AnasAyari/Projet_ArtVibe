@@ -1,7 +1,12 @@
 <div class="contentList-container">
-    <ul style="list-style: none;margin-left: 10rem;">
-        <li *ngFor="let act of activitiesTable">
-            <app-user-content [activity]="act"></app-user-content>
+    <ul style="list-style: none;">
+
+        <input type="text" placeholder="Search..." class="activitieslist-search" [(ngModel)]="searchTerm">
+
+        <li *ngFor="let act of searchActivities()">
+            <div>
+                <app-user-content [activity]="act"></app-user-content>
+            </div>
         </li>
     </ul>
 </div>

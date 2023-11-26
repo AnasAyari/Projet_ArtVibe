@@ -86,6 +86,7 @@ export class RequestsComponent implements OnInit{
   //ACCEPT A PARTICIPATION REQUEST AND ADD A USER TO AN ACTIVITIES PARTICIPANTS LIST
   acceptRequest(userID:number,activityID:number,requestID:number){
     this.activityService.getActivityById(activityID).subscribe(data => {
+      
       data.participant.push(this.getRequestUser(userID));
       data.participantNB += 1;
       data.requests = data.requests.filter((req) => req.id!== requestID);

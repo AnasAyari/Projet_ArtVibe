@@ -44,7 +44,7 @@
 }
 .last-month-activitites{
     border:3px solid black;
-    max-width:500px;
+    width:700px;
     max-height:auto;
 }
 .most-participating-users{
@@ -119,7 +119,9 @@
 .mat-drawer-content{
     display:inline;
 }
-
+h2{
+    margin-bottom:0px;
+}
 @media screen and (max-width: 1024px){
     .last-month-activities{
         width:200px;

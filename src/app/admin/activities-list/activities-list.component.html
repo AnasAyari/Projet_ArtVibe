@@ -2,7 +2,7 @@
 
     <div class="activities-with-search">
         <div class="d-flex justify-content-between">
-            <input type="text" placeholder="Search..." class="activitieslist-search">
+            <input type="text" placeholder="Search by category..." class="activitieslist-search" [(ngModel)]="searchTerm">
             <button class="activitieslist-sortBtn" (click)=" sortActivitiesAZ()">Sort A-Z</button>
         </div>
         <div class="activitites-list">
@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let act of activitiesTable">
+                    <tr *ngFor="let act of searchActivities()">
                         <td>
                             {{act.title}}
                         </td>
@@ -37,32 +37,62 @@
                         </td>
                         <td>
                             <button class="activitieslist-deleteBtn" (click)="deleteActivityById(act.id)">Delete</button>
+                            <button class="activitieslist-deleteBtn" (click)="toggleModifyForm();modifyForm(act.id)" style="margin-left:25px;">Modify</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="d-flex flex-column align-items-center" >
-            <button class="activitieslist-addBtn" mat-raised-button (click)="toggleForm()">Add activity</button>
-            <div *ngIf="showForm" class="activityForm-container">
-                <form [formGroup]="acitivityForm" class="form-group">
-                <label for="title">Title:</label>
-                <input type="text" id="title" formControlName="title" class="form-control">
-            
-                <label for="date">Date:</label>
-                <input type="date" id="date" formControlName="date"class="form-control">
-            
-                <label for="description">Description:</label>
-                <textarea id="description" formControlName="description"class="form-control"></textarea>
-            
-                <label for="category">Category:</label>
-                <input type="text" id="category" formControlName="category"class="form-control">
-            
-                <label for="photo">Photo:</label>
-                <input type="file" id="photo" formControlName="photo"class="form-control">
-            
-                <button type="submit"class="form-control activitieslist-addBtn" (click)="toggleForm();addAct()">Submit</button>
-                </form>
+            <button class="activitieslist-addBtn" mat-raised-button (click)="toggleAddForm()">Add activity</button>
+            <div class="d-flex;" style="flex-direction: row;">
+                
+                <div *ngIf="showAddForm" class="activityForm-container">
+                    <h1>Add Activity</h1>
+                    <form [formGroup]="acitivityForm" class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" formControlName="title" class="form-control" >
+                
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" formControlName="date"class="form-control">
+                
+                    <label for="description">Description:</label>
+                    <textarea id="description" formControlName="description"class="form-control"></textarea>
+                
+                    <label for="category">Category:</label>
+                    <select name="categories" formControlName="category">
+                        <option *ngFor="let c of allCategories" [value]="c">{{c}}</option>
+                    </select>
+                
+                    <label for="photo">Photo:</label>
+                    <input type="file" id="photo" formControlName="photo"class="form-control">
+                
+                    <button type="submit"class="form-control activitieslist-addBtn" (click)="toggleAddForm();addAct()">Submit</button>
+                    </form>
+                </div>
+                <div *ngIf="showModifyForm" class="activityForm-container">
+                    <h1>Modify Activity</h1>
+                    <form [formGroup]="acitivityModifyForm" class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" formControlName="title" class="form-control">
+                
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" formControlName="date"class="form-control">
+                
+                    <label for="description">Description:</label>
+                    <textarea id="description" formControlName="description"class="form-control"></textarea>
+                
+                    <label for="category">Category:</label>
+                    <select name="categories" formControlName="category">
+                        <option *ngFor="let c of allCategories" [value]="c">{{c}}</option>
+                    </select>
+                
+                    <label for="photo">Photo:</label>
+                    <input type="file" id="photo" formControlName="photo"class="form-control">
+                
+                    <button type="submit"class="form-control activitieslist-addBtn" (click)="toggleModifyForm();modifyAct()">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

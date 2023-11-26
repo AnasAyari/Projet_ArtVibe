@@ -4,6 +4,7 @@ import { Activity } from 'src/app/models/activity';
 import { ActivityService } from 'src/app/services/activity.service';
 import { AddActivityComponent } from '../popupforms/add-activity/add-activity.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Categories } from 'src/app/categories';
 
 
 @Component({
@@ -14,29 +15,77 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ActivitiesListComponent implements OnInit{
 
   acitivityForm!: FormGroup;
+  acitivityModifyForm!: FormGroup;
   filteredActivities: Activity[] = [];
   activitiesTable!:Activity[];
-  showForm: boolean=false
+  showAddForm: boolean=false
+  showModifyForm: boolean=false
+  activityID!:any
+  allCategories = Object.values(Categories)
   constructor(private activityService:ActivityService,public dialog: MatDialog, private fb:FormBuilder){}
-
+  
   ngOnInit(): void {
+    
+
     this.getAllActivities();
+    this.filteredActivities = this.activitiesTable;
     this.acitivityForm=this.fb.group({
       title: ['', Validators.required],
       date: ['', Validators.required],
       description: ['', Validators.required],
-      category: ['', Validators.required],
+      category: [this.allCategories[1], Validators.required],
       participantNB: [0,],
       likeNumber: [0,],
       photo: [''],
       likeusers:this.fb.array([]),
       comments: this.fb.array([]),
       requests: this.fb.array([]),
+      participant: this.fb.array([]),
     })
+    this.acitivityModifyForm=this.fb.group({
+      title: ['', Validators.required],
+      date: ['', Validators.required],
+      description: ['', Validators.required],
+      category: [this.allCategories[1], Validators.required],
+      participantNB: [0,],
+      likeNumber: [0,],
+      photo: [''],
+      likeusers:this.fb.array([]),
+      comments: this.fb.array([]),
+      requests: this.fb.array([]),
+      participant: this.fb.array([]),
+    })
+
   }
 
-  toggleForm() {
-    this.showForm = !this.showForm;
+  toggleAddForm() {
+    this.showAddForm = !this.showAddForm;
+  }
+  modifyForm(activityID:number){
+    console.log(activityID);
+    this.activityID = activityID
+    this.activityService.getActivityById(activityID).subscribe(data => {
+      console.log(data);
+      this.acitivityModifyForm=this.fb.group({
+        title: [data.title, Validators.required],
+        date: [data.date, Validators.required],
+        description: [data.description, Validators.required],
+        category: [data.category, Validators.required],
+        participantNB: [data.participantNB,],
+        likeNumber: [data.likeusers.length,],
+        photo: [data.photo],
+        likeusers:[data.likeusers],
+        comments: [data.comments],
+        requests: [data.requests],
+        participant:[data.participant],
+      })
+    })
+    
+  }
+  toggleModifyForm() {
+    
+    this.showModifyForm = !this.showModifyForm;
+    
   }
 
 
@@ -83,8 +132,29 @@ export class ActivitiesListComponent implements OnInit{
   addAct(){
     this.activityService.saveActivity(this.acitivityForm.value).subscribe(data=>{
       console.log(data);
-      
+      this.activityService.getActivities().subscribe(data => {
+        this.activitiesTable = data;
+      })
     })
     
+  }
+  modifyAct(){
+    this.activityService.updateActivity(this.activityID,this.acitivityModifyForm.value).subscribe(data => {
+      console.log(data);
+      this.activityService.getActivities().subscribe(data => {
+        this.activitiesTable = data;
+      })
+    })
+  }
+  searchTerm!:string
+  searchActivities() {
+    if (!this.searchTerm) {
+      this.filteredActivities = this.activitiesTable;
+    } else {
+      this.filteredActivities = this.activitiesTable.filter(
+        act => act.category.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+    return this.filteredActivities;
   }
 }

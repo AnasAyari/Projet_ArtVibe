@@ -4,5 +4,6 @@ export class User {
         public email!:string;
         public pwd!:string;
         public admin:boolean = false;
+
         constructor(){}
 }

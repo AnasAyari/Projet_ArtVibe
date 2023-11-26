@@ -24,14 +24,15 @@ import { UserMainComponent } from './user/user-main/user-main.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
-  {path:"admin",component:DashboardComponent,
+  {path:"admin/:id",component:DashboardComponent,
   children:[
-    {path:"home",component:DashboardHomeComponent},
-    {path:"activitieslist",component:ActivitiesListComponent},
-    {path:"userslist",component:UsersListComponent},
-    {path:"requests",component:RequestsComponent},
-    {path:"",redirectTo:"home",pathMatch:"full"},
-    {path:"PasswordChangingPage",component:PasswordChangerPageComponent}
+    {path:"home/:id",component:DashboardHomeComponent},
+    {path:"activitieslist/:id",component:ActivitiesListComponent},
+    {path:"userslist/:id",component:UsersListComponent},
+    {path:"requests/:id",component:RequestsComponent},
+    {path:"PasswordChangingPage/:id",component:PasswordChangerPageComponent},
+    {path:"",redirectTo:"home/:id",pathMatch:"full"}
+    
     ]
   },
   {path:"form",component:FormulaireComponent,

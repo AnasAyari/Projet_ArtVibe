@@ -11,11 +11,12 @@ import { ActivityService } from 'src/app/services/activity.service';
 export class ContentListComponent implements OnInit{
   id:any;
   activitiesTable!:any[]
-
+  filteredActivities: Activity[] = [];
   constructor(private activityService:ActivityService,private router:Router,private activatedRoute:ActivatedRoute){}
   
   ngOnInit(): void {
     this.getAllActivities();
+    this.filteredActivities = this.activitiesTable;
     this.id=this.activatedRoute.snapshot.paramMap.get('id')
   }
 
@@ -26,6 +27,16 @@ export class ContentListComponent implements OnInit{
       
     })
   }
-
+  searchTerm!:string
+  searchActivities() {
+    if (!this.searchTerm) {
+      this.filteredActivities = this.activitiesTable;
+    } else {
+      this.filteredActivities = this.activitiesTable.filter(
+        act => act.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+    return this.filteredActivities;
+  }
 
 }

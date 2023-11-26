@@ -15,9 +15,7 @@ export class AuthService implements OnInit{
         );
 
       }
-  
       userID!:number
-
   private authenticated = false;
   public login() {
     console.log(this.users);

@@ -1,7 +1,7 @@
 <div class="section-container d-flex flex-column align-items-center">
     <h1 class="section-title">Liked Posts</h1>
     <div>
-        <ul style="list-style: none;margin-left: 10rem;">
+        <ul style="list-style: none;">
             <ng-container *ngFor="let act of activitiesTable">
                 <li >
                     <app-user-content [activity]="act" *ngIf="checkValidation(act.likeusers)"></app-user-content>

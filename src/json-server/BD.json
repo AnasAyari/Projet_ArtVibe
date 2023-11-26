@@ -22,15 +22,31 @@
       "pwd": "4",
       "participations": 7,
       "email": "test",
-      "id": 4
+      "id": 3
     },
     {
       "admin": false,
       "username": "Khadija",
       "pwd": ":3",
-      "participations": 8,
+      "participations": 9,
       "email": "Tina@gmail.com",
+      "id": 4
+    },
+    {
+      "admin": false,
+      "username": "Yass",
+      "pwd": "123",
+      "participations": 11,
+      "email": "Yass@gmail.com",
       "id": 5
+    },
+    {
+      "admin": false,
+      "username": "artemis",
+      "pwd": "123",
+      "participations": 10,
+      "email": "artemis@gmail.com",
+      "id": 6
     }
   ],
   "comments": [
@@ -153,212 +169,143 @@
       "userID": 1,
       "message": "test",
       "id": 20
+    },
+    {
+      "activityID": 2,
+      "userID": 1,
+      "message": "test",
+      "id": 21
     }
   ],
   "activities": [
     {
-      "title": "Formation c#",
-      "date": "2023-11-24",
-      "description": "description test",
-      "category": "formation",
-      "participantNB": 10,
-      "participant": [
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        },
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        },
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        },
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        }
-      ],
-      "photo": "",
+      "title": "Animus Day",
+      "date": "2023-11-27",
+      "description": "Animus day is a gaming event where many competitions take place.",
+      "category": "Event",
+      "participantNB": 2,
+      "likeNumber": 1,
+      "photo": "../../../assets/images/animus.jpg",
       "likeusers": [
         {
-          "id": 2,
-          "username": "Ayar",
-          "email": "ayar@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
+          "admin": false,
+          "username": "Khadija",
+          "pwd": ":3",
+          "participations": 9,
+          "email": "Tina@gmail.com",
+          "id": 4
         },
         {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
+          "admin": false,
+          "username": "test",
+          "pwd": "4",
+          "participations": 7,
+          "email": "test",
+          "id": 3
         }
       ],
-      "comments": [
-        {
-          "message": "test1",
-          "activityID": 2,
-          "userID": 1,
-          "id": 1
-        },
-        {
-          "message": "test2",
-          "activityID": 2,
-          "userID": 5,
-          "id": 2
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "test3",
-          "id": 15
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "test3",
-          "id": 16
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "Ayar mta3 el manga",
-          "id": 17
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "azea",
-          "id": 18
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "ayar mta3 el magazine",
-          "id": 19
-        }
-      ],
+      "comments": [],
       "requests": [],
+      "participant": [
+        {
+          "admin": false,
+          "username": "Khadija",
+          "pwd": ":3",
+          "participations": 8,
+          "email": "Tina@gmail.com",
+          "id": 4
+        },
+        {
+          "admin": false,
+          "username": "Khadija",
+          "pwd": ":3",
+          "participations": 8,
+          "email": "Tina@gmail.com",
+          "id": 4
+        }
+      ],
       "id": 1
     },
     {
-      "title": "Formation c#",
-      "date": "2023-11-24",
-      "description": "description test",
-      "category": "formation",
-      "participantNB": 10,
-      "participant": [
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        },
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        },
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        },
-        {
-          "id": 1,
-          "username": "Ghzela",
-          "email": "ghzela@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
-        }
-      ],
-      "photo": "",
+      "title": "formation PS",
+      "date": "2023-11-07",
+      "description": "test",
+      "category": "Formation",
+      "participantNB": 0,
+      "likeNumber": 0,
+      "photo": "../../../assets/images/talentshow.jpg",
       "likeusers": [
         {
-          "id": 2,
-          "username": "Ayar",
-          "email": "ayar@gmail.com",
-          "pwd": "123",
-          "participations": 0,
-          "admin": true
+          "admin": false,
+          "username": "Khadija",
+          "pwd": ":3",
+          "participations": 9,
+          "email": "Tina@gmail.com",
+          "id": 4
         }
       ],
       "comments": [
         {
-          "message": "test1",
           "activityID": 2,
           "userID": 1,
-          "id": 1
-        },
-        {
-          "message": "test2",
-          "activityID": 2,
-          "userID": 5,
-          "id": 2
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "test3",
-          "id": 15
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "test3",
-          "id": 16
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "Ayar mta3 el manga",
-          "id": 17
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "azea",
-          "id": 18
-        },
-        {
-          "activityID": 1,
-          "userID": 1,
-          "message": "ayar mta3 el magazine",
-          "id": 19
+          "message": "test",
+          "id": 21
         }
       ],
       "requests": [],
+      "participant": [],
+      "id": 2
+    },
+    {
+      "title": "Workshop",
+      "date": "2023-11-30",
+      "description": "workshop",
+      "category": "Workshop",
+      "participantNB": 1,
+      "likeNumber": 0,
+      "photo": "../../../assets/images/debat.jpg",
+      "likeusers": [],
+      "comments": [],
+      "requests": [],
+      "participant": [
+        {
+          "admin": false,
+          "username": "Khadija",
+          "pwd": ":3",
+          "participations": 9,
+          "email": "Tina@gmail.com",
+          "id": 4
+        }
+      ],
       "id": 3
+    },
+    {
+      "title": "azeae",
+      "date": "2023-11-03",
+      "description": "azeazeae",
+      "category": "Formation",
+      "participantNB": 0,
+      "likeNumber": 0,
+      "photo": "../../../assets/images/logocomptition.jpg",
+      "likeusers": [],
+      "comments": [],
+      "requests": [],
+      "participant": [],
+      "id": 4
+    },
+    {
+      "title": "azeae",
+      "date": "2023-11-26",
+      "description": "azeaze",
+      "category": "Workshop",
+      "participantNB": 0,
+      "likeNumber": 0,
+      "photo": "../../../assets/images/najahstagek.jpg",
+      "likeusers": [],
+      "comments": [],
+      "requests": [],
+      "participant": [],
+      "id": 5
     }
   ],
   "requests": []

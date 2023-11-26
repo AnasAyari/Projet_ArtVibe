@@ -5,49 +5,23 @@
         </div>
         <table class="table table-striped">
             <thead>
-                <tr>
+                <tr > 
                     <th>Title</th>
                     <th>Date</th>
                     <th>Participant number</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let mpia of mostParticipatedInActivities">
                     <td>
-                        c# Workshop
+                        {{mpia.title}}
                     </td>
                     <td>
-                        14/11/2023
+                        {{mpia.date}}
                     </td>
                     <td class="d-flex justify-content-center">
                         <p class="badge bg-black participant-number" >
-                            12
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        c# Workshop
-                    </td>
-                    <td>
-                        14/11/2023
-                    </td>
-                    <td class="d-flex justify-content-center">
-                        <p class="badge bg-black participant-number">
-                            12
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        c# Workshop
-                    </td>
-                    <td>
-                        14/11/2023
-                    </td>
-                    <td class="d-flex justify-content-center">
-                        <p class="badge bg-black participant-number">
-                            12
+                            {{mpia.participantNB}}
                         </p>
                     </td>
                 </tr>
@@ -55,52 +29,6 @@
         </table>
     </div>
     
-    <div class="most-participating-users hover" style="background-color: white;">
-        <div class="d-flex align-items-center justify-content-center">
-            <h2>Most Participating Members</h2>
-        </div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Total participations</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="m-p-user-cursor">
-                    <td>
-                        TBTaleb
-                    </td>
-                    <td class="d-flex justify-content-center">
-                        <p class="badge bg-black participant-number" >
-                            12
-                        </p>
-                    </td>
-                </tr>
-                <tr class="m-p-user-cursor">
-                    <td>
-                        TBTaleb
-                    </td>
-                    <td class="d-flex justify-content-center">
-                        <p class="badge bg-black participant-number">
-                            12
-                        </p>
-                    </td>
-                </tr>
-                <tr class="m-p-user-cursor">
-                    <td>
-                        TBTaleb
-                    </td>
-                    <td class="d-flex justify-content-center">
-                        <p class="badge bg-black participant-number">
-                            12
-                        </p>
-                    </td>
-                </tr>
-                
-            </tbody>
-        </table>
-    </div>
 <div class="img-card-container">
     <div class="cardA cards hover">
     
@@ -125,14 +53,70 @@
 <div class="third-container">
 <div class="events hover">
     <h2>Upcoming event:</h2>
+        <table style="width:100%;height:100%">
+            <tr>
+                <th>Title</th>
+                <td>{{upComingActivity.title}}</td>
+            </tr>
+            <tr>
+                <th>
+                    Date
+                </th>
+                <td>
+                    {{upComingActivity.date}}
+                </td>
+            </tr>
+        </table>
 </div>
 <div class="events hover">
     <h2>Most Liked Event:</h2>
+    <table style="width:100%;height:100%;padding:15px;">
+        <tr>
+            <th>Title</th>
+            <td>{{mostLikedActivity.title}}</td>
+        </tr>
+        <tr>
+            <th>
+                Date
+            </th>
+            <td>
+                {{mostLikedActivity.date}}
+            </td>
+        </tr>
+    </table>
 </div>
-<div class="events hover">
+<div class="events hover" >
     <h2>Last Event:</h2>
+    <table style="width:100%;height:100%;padding:15px;">
+        <tr>
+            <th>Title</th>
+            <td>{{lastActivity.title}}</td>
+        </tr>
+        <tr>
+            <th>
+                Date
+            </th>
+            <td>
+                {{lastActivity.date}}
+            </td>
+        </tr>
+    </table>
 </div>
 <div class="events hover">
     <h2>Active Event:</h2>
+    <table style="width:100%;height:100%;padding:15px;">
+        <tr>
+            <th>Title</th>
+            <td>{{activeActivity.title}}</td>
+        </tr>
+        <tr>
+            <th>
+                Date
+            </th>
+            <td>
+                {{activeActivity.date}}
+            </td>
+        </tr>
+    </table>
 </div>
 </div>
