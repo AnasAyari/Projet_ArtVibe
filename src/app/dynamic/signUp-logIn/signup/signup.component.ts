@@ -26,6 +26,7 @@ export class SignupComponent {
         })
         console.log("email doesnt exists");
         console.log("REGISTRED!!!");
+        this.router.navigate(['form/login']);
       }else{
         console.log("email adress already exists please use another one");
       }

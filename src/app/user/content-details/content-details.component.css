@@ -123,6 +123,18 @@ h2{
     margin-top: 1rem;
 }
 
+.participateBtn{
+    border:3px solid black;
+    background-color:white;
+    padding:5px;
+    font-weight:bold;
+}
+.participateBtn:hover{
+    background-color:black;
+    transform: translateY(-5px);
+    color:white;
+}
+
 @media screen and (max-width: 426px){
     .activities-with-search{
         margin-top:100px;
