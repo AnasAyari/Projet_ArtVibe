@@ -18,6 +18,7 @@ import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-lis
 import { PasswordChangerPageComponent } from './admin/password-changer-page/password-changer-page.component';
 import { authGuard } from './guards/guard.guard';
 import { UserMainComponent } from './user/user-main/user-main.component';
+import { adminGuard } from './guards/admin.guard';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -38,7 +39,7 @@ const routes: Routes = [
     {path:"signup",component:SignupComponent},
     ],
   },
-  {path:"user/:id",component:UserMainComponent,
+  {path:"user/:id",component:UserMainComponent,canActivate: [authGuard],
     children:[
       {path:"userProfile/:id",component:UserProfileComponent},
       {path:"likedPosts/:id",component:LikedPostsListComponent},

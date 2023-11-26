@@ -1,9 +1,11 @@
+import { AnimationStyleMetadata } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, IsActiveMatchOptions, Router } from '@angular/router';
 import { Activity } from 'src/app/models/activity';
 import { ActivityService } from 'src/app/services/activity.service';
 import { RequestService } from 'src/app/services/request.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-content-details',
@@ -14,12 +16,16 @@ export class ContentDetailsComponent implements OnInit{
   requestForm!: FormGroup;
   showForm: boolean=false
   userID!:any;
+  usersTable!:any[];
   activityID!:any;
   activity!:Activity;
-  constructor(private fb:FormBuilder,private router:Router,private requestService:RequestService,private activatedRoute:ActivatedRoute,private activityService:ActivityService){}
+  constructor(private fb:FormBuilder,private userService:UserService,private router:Router,private requestService:RequestService,private activatedRoute:ActivatedRoute,private activityService:ActivityService){}
   ngOnInit(): void {
     this.userID=this.activatedRoute.snapshot.paramMap.get('userID');
     this.activityID=this.activatedRoute.snapshot.paramMap.get('activityID');
+    this.userService.getUsersList().subscribe(data => {
+      this.usersTable = data;
+    })
     this.activityService.getActivityById(this.activityID).subscribe(data => {
       this.activity = data;
     })
@@ -48,5 +54,12 @@ export class ContentDetailsComponent implements OnInit{
       });
     });
     
+  }
+  getUserById(userID:number){
+    for(let i=0;i<this.usersTable.length;i++){
+      if(this.usersTable[i].id == userID){
+        return this.usersTable[i];
+      }
+    }
   }
 }

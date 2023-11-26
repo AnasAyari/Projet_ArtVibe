@@ -18,7 +18,7 @@ export class LoginComponent {
   login(email:string,password:string){
     if(this.authservice.checkLogin(email,password)){
       if (this.authservice.isAdmin){
-        this.router.navigate(['admin/home']);
+        this.router.navigate([`admin/${this.authservice.userID}/home/${this.authservice.userID}`]);
       }else{
         this.router.navigate([`user/${this.authservice.userID}/userProfile/${this.authservice.userID}`]);
       }

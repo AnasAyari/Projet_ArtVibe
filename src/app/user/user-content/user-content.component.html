@@ -17,9 +17,11 @@
                 </div>
             </div>
             <div class="activity-footer">
-                <i class="fa-regular fa-heart fa-2xl" (click)="Like(activity.id)"></i>
+                <!-- ? 'fa-solid fa-heart fa-2xl' : 'fa-regular fa-heart fa-2xl';-->
+                <i [ngClass]="changeButtonStyle(activity.likeusers)?'fa-solid fa-heart fa-2xl' : 'fa-regular fa-heart fa-2xl' " (click)="Like(activity.id)"></i>
                 <input type="text" placeholder="Write a comment..."  #message>
                 <i class="far fa-comment-alt fa-2xl" (click)="Comment(activity.id,message.value)"></i>
+
             </div>
         </div>
         <div class="comment-section">

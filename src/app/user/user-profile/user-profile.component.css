@@ -11,33 +11,11 @@ h2{
     margin-top: 2.5rem;
 }
 
-.bio-btn{
-    position: absolute;
-    border-radius: 0.5rem;
-    margin: 1rem;
-    bottom: 1rem;
-    right: 1rem;
-    background-color: black;
-}
 .pass-btn{
-    position: absolute;
-    border-radius: 0.5rem;
+    padding:15px;
+    font-size:25px;
     margin: 1rem;
-    bottom: 1rem;
-    right: 10rem;
     background-color: black;
-}
-
-.photo-btn{
-    display: flex;
-    position: absolute;
-    border-radius: 0.5rem;
-    margin: 1rem;
-    bottom: 1rem;
-    right: 24rem;
-    height: 2.35rem;
-    background-color: black;
-    width: 15rem;
 }
 
 .userProfile-container{
@@ -53,7 +31,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-image: url(../../../assets/images/contentListBackground.png);
 }
 
 .username h1{
@@ -79,7 +57,8 @@ h1{
 }
 
 .suggestion-section h1{
-    font-size: 6rem;
+    font-size: 3rem;
+    line-height:3rem;
 }
 
 .user-informations{
@@ -95,13 +74,15 @@ h1{
 
 .artvibe-section{
     width:50%;
-    background-color: white;
+    background-image: url(../../../assets/images/contentListBackground.png);
+    text-shadow: 0 0 10px;
 }
 
 .infos{
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .infos img{

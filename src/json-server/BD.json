@@ -4,7 +4,7 @@
       "id": 1,
       "username": "Ghzela",
       "email": "ghzela@gmail.com",
-      "pwd": "123",
+      "pwd": "321321321",
       "participations": 0,
       "admin": true
     },
@@ -47,6 +47,28 @@
       "participations": 10,
       "email": "artemis@gmail.com",
       "id": 6
+    },
+    {
+      "admin": false,
+      "username": "ImageTest",
+      "pwd": "12345678",
+      "email": "ImageTest@gmail.com",
+      "photo": {
+        "message": "Random Anime GIF Images",
+        "status": "200",
+        "images": [
+          "https://res.cloudinary.com/anyanime/image/upload/my-dress-up-darling-anime-loveKurizu79.gif"
+        ]
+      },
+      "id": 7
+    },
+    {
+      "admin": false,
+      "username": "ImageTest2",
+      "pwd": "12345678",
+      "email": "ImageTest3",
+      "photo": "https://res.cloudinary.com/anyanime/image/upload/tumblr_ml9rzfC5Bn1qi0f9no1_500Kurizu14.gif",
+      "id": 8
     }
   ],
   "comments": [
@@ -186,24 +208,7 @@
       "participantNB": 2,
       "likeNumber": 1,
       "photo": "../../../assets/images/animus.jpg",
-      "likeusers": [
-        {
-          "admin": false,
-          "username": "Khadija",
-          "pwd": ":3",
-          "participations": 9,
-          "email": "Tina@gmail.com",
-          "id": 4
-        },
-        {
-          "admin": false,
-          "username": "test",
-          "pwd": "4",
-          "participations": 7,
-          "email": "test",
-          "id": 3
-        }
-      ],
+      "likeusers": [],
       "comments": [],
       "requests": [],
       "participant": [
@@ -231,19 +236,10 @@
       "date": "2023-11-07",
       "description": "test",
       "category": "Formation",
-      "participantNB": 0,
+      "participantNB": 1,
       "likeNumber": 0,
       "photo": "../../../assets/images/talentshow.jpg",
-      "likeusers": [
-        {
-          "admin": false,
-          "username": "Khadija",
-          "pwd": ":3",
-          "participations": 9,
-          "email": "Tina@gmail.com",
-          "id": 4
-        }
-      ],
+      "likeusers": [],
       "comments": [
         {
           "activityID": 2,
@@ -253,7 +249,16 @@
         }
       ],
       "requests": [],
-      "participant": [],
+      "participant": [
+        {
+          "admin": false,
+          "username": "Khadija",
+          "pwd": ":3",
+          "participations": 9,
+          "email": "Tina@gmail.com",
+          "id": 4
+        }
+      ],
       "id": 2
     },
     {
@@ -280,21 +285,7 @@
       "id": 3
     },
     {
-      "title": "azeae",
-      "date": "2023-11-03",
-      "description": "azeazeae",
-      "category": "Formation",
-      "participantNB": 0,
-      "likeNumber": 0,
-      "photo": "../../../assets/images/logocomptition.jpg",
-      "likeusers": [],
-      "comments": [],
-      "requests": [],
-      "participant": [],
-      "id": 4
-    },
-    {
-      "title": "azeae",
+      "title": "Workshop Pixel Art",
       "date": "2023-11-26",
       "description": "azeaze",
       "category": "Workshop",
