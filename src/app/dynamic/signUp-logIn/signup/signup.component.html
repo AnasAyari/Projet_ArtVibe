@@ -5,7 +5,7 @@
     <input type="email" placeholder="Enter your e-mail..."  [(ngModel)]="newUser.email" name="email">
     <label for="" style="align-self: flex-start; margin:1rem 0;">Password</label>
     <input type="password" placeholder="Enter your password..."  [(ngModel)]="newUser.pwd" name="pwd">
-    <p [innerHTML]="newUser.pwd | passwordStrnthPipe"></p>    <button>SIGN UP</button>
+    <p [innerHTML]="newUser.pwd | passwordStrnthPipe"></p><button>SIGN UP</button>
     <a routerLink="/form/login">Already have an account ? Login instead.</a>
 </form>
 

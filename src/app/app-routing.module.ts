@@ -10,21 +10,18 @@ import { DashboardHomeComponent } from './admin/dashboard-home/dashboard-home.co
 import { UsersListComponent } from './admin/users-list/users-list.component';
 import { RequestsComponent } from './admin/requests/requests.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
-import { LikepostsComponent } from './user/likeposts/likeposts.component';
 import { SavedpostsComponent } from './user/savedposts/savedposts.component';
 import { UserapplicationsComponent } from './user/userapplications/userapplications.component';
 import { ContentDetailsComponent } from './user/content-details/content-details.component';
 import { ContentListComponent } from './user/content-list/content-list.component';
 import { LikedPostsListComponent } from './user/liked-posts-list/liked-posts-list.component';
-import { SavedPostsListComponent } from './user/saved-posts-list/saved-posts-list.component';
-import { UserContentComponent } from './user/user-content/user-content.component';
 import { PasswordChangerPageComponent } from './admin/password-changer-page/password-changer-page.component';
 import { authGuard } from './guards/guard.guard';
 import { UserMainComponent } from './user/user-main/user-main.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
-  {path:"admin/:id",component:DashboardComponent,
+  {path:"admin/:id",component:DashboardComponent,canActivate: [authGuard],
   children:[
     {path:"home/:id",component:DashboardHomeComponent},
     {path:"activitieslist/:id",component:ActivitiesListComponent},
