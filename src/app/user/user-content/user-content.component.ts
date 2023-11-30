@@ -15,8 +15,9 @@ export class UserContentComponent implements OnInit{
 
   @Input() activity!:Activity;
   id:any;
-  usersTable:any[] =[]
+  usersTable:any[] = []
   activitiesTable!:any[]
+  isLiked: boolean = false;
   constructor(private router:Router,private userService:UserService,private activityService:ActivityService,private commentService:CommentService,private activatedRoute:ActivatedRoute){}
   ngOnInit(): void {
     this.id=this.activatedRoute.snapshot.paramMap.get('id')
@@ -66,14 +67,21 @@ export class UserContentComponent implements OnInit{
     }
     if(i==this.activity.likeusers.length){
       this.activity.likeusers.push(this.getUserById(this.id));
-      this.activityService.updateActivity(activityID,this.activity).subscribe()
+      console.log(this.activity.likeusers);
+      this.activityService.updateActivity(activityID,this.activity).subscribe();
       console.log(this.activity);
+      
       console.log("Liking a post");
     }else{
-      console.log("removing a like");
+      this.activity.likeusers = this.activity.likeusers.filter((user) => {
+        return  this.activity.likeusers.indexOf(user) == -1;
+      });
+      console.log(this.activity.likeusers);
+      this.activityService.updateActivity(activityID,this.activity).subscribe();
+      console.log(this.activity);
       
+      console.log("removing a like");
     }
-    
   }
   request:any = {}
   sendRequest(activityID:number){
@@ -83,5 +91,16 @@ export class UserContentComponent implements OnInit{
   }
   onClick(){
     this.router.navigate([`user/${this.activity.id}/contentDetails/${this.id}/${this.activity.id}`]);
+  }
+  //getHeartIconClass(likeusers:any[]) {
+  //  return this.isLiked;
+  //}
+  changeButtonStyle(likeusers:any[]){
+    for(let i=0;i<likeusers.length;i++){
+      if(likeusers[i].id==this.id){
+        return !this.isLiked;
+      }
+    }
+    return this.isLiked;
   }
 }

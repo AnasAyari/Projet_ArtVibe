@@ -14,31 +14,37 @@
                     Home
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/{{id}}/activitieslist">
-                <div routerLinkActive="dashboard-sidnav-i" [routerLinkActiveOptions]="{exact: true}">
-                    Home
+            <a mat-list-item routerLink="/user/{{id}}/contentList/{{id}}">
+                <div routerLinkActive="dashboard-sidnav-i">
+                    Content
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/{{id}}/activitieslist">
+            <a mat-list-item routerLink="/admin/{{id}}/activitieslist/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Activities List
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/{{id}}/userslist">
+            <a mat-list-item routerLink="/admin/{{id}}/userslist/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Users List
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/{{id}}/requests">
+            <a mat-list-item routerLink="/admin/{{id}}/requests/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Requests
                 </div>
             </a>
-            <a mat-list-item routerLink="/admin/{{id}}/PasswordChangingPage">
+            <a mat-list-item routerLink="/user/{{id}}/userProfile/{{id}}">
+                <div routerLinkActive="dashboard-sidnav-i">
+                    Profile
+                </div>
+            </a>
+            <a mat-list-item routerLink="/admin/{{id}}/PasswordChangingPage/{{id}}">
                 <div routerLinkActive="dashboard-sidnav-i">
                     Change Password
                 </div>
             </a>
+            
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content style="height:100%;width:100%;scroll-behavior: smooth;">
