@@ -53,7 +53,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-image: url(../../../assets/images/contentListBackground.png);
 }
 
 .username h1{
