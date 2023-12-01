@@ -14,14 +14,14 @@
             <tbody>
                 <tr *ngFor="let mpia of mostParticipatedInActivities">
                     <td>
-                        {{mpia.title}}
+                        {{mpia?.title}}
                     </td>
                     <td>
-                        {{mpia.date}}
+                        {{mpia?.date}}
                     </td>
                     <td class="d-flex justify-content-center">
                         <p class="badge bg-black participant-number" >
-                            {{mpia.participantNB}}
+                            {{mpia?.participantNB}}
                         </p>
                     </td>
                 </tr>
@@ -54,16 +54,16 @@
 <div class="events hover">
     <h2>Upcoming event:</h2>
         <table style="width:100%;height:100%">
-            <tr>
+            <tr >
                 <th>Title</th>
-                <td>{{upComingActivity.title}}</td>
+                <td>{{upComingActivity?.title}}</td>
             </tr>
             <tr>
                 <th>
                     Date
                 </th>
                 <td>
-                    {{upComingActivity.date}}
+                    {{upComingActivity?.date}}
                 </td>
             </tr>
         </table>
@@ -73,14 +73,14 @@
     <table style="width:100%;height:100%;padding:15px;">
         <tr>
             <th>Title</th>
-            <td>{{mostLikedActivity.title}}</td>
+            <td>{{mostLikedActivity?.title}}</td>
         </tr>
         <tr>
             <th>
                 Date
             </th>
             <td>
-                {{mostLikedActivity.date}}
+                {{mostLikedActivity?.date}}
             </td>
         </tr>
     </table>
@@ -90,14 +90,14 @@
     <table style="width:100%;height:100%;padding:15px;">
         <tr>
             <th>Title</th>
-            <td>{{lastActivity.title}}</td>
+            <td>{{lastActivity?.title}}</td>
         </tr>
         <tr>
             <th>
                 Date
             </th>
             <td>
-                {{lastActivity.date}}
+                {{lastActivity?.date}}
             </td>
         </tr>
     </table>
@@ -114,7 +114,7 @@
                 Date
             </th>
             <td>
-                {{activeActivity.date}}
+                {{activeActivity?.date}}
             </td>
         </tr>
     </table>

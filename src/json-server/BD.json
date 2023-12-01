@@ -12,7 +12,7 @@
       "id": 2,
       "username": "Ayar",
       "email": "ayar@gmail.com",
-      "pwd": "testtest",
+      "pwd": "testtest2",
       "participations": 0,
       "admin": true
     },
@@ -27,7 +27,7 @@
     {
       "admin": false,
       "username": "Khadija",
-      "pwd": ":3",
+      "pwd": "12345678",
       "participations": 9,
       "email": "Tina@gmail.com",
       "id": 4
@@ -197,6 +197,18 @@
       "userID": 1,
       "message": "test",
       "id": 21
+    },
+    {
+      "activityID": 1,
+      "userID": "4",
+      "message": "i liked this event",
+      "id": 22
+    },
+    {
+      "activityID": 3,
+      "userID": "4",
+      "message": "great!",
+      "id": 23
     }
   ],
   "activities": [
@@ -205,11 +217,18 @@
       "date": "2023-11-27",
       "description": "Animus day is a gaming event where many competitions take place.",
       "category": "Event",
-      "participantNB": 2,
+      "participantNB": 3,
       "likeNumber": 1,
       "photo": "../../../assets/images/animus.jpg",
       "likeusers": [],
-      "comments": [],
+      "comments": [
+        {
+          "activityID": 1,
+          "userID": "4",
+          "message": "i liked this event",
+          "id": 22
+        }
+      ],
       "requests": [],
       "participant": [
         {
@@ -227,6 +246,14 @@
           "participations": 8,
           "email": "Tina@gmail.com",
           "id": 4
+        },
+        {
+          "id": 2,
+          "username": "Ayar",
+          "email": "ayar@gmail.com",
+          "pwd": "testtest",
+          "participations": 0,
+          "admin": true
         }
       ],
       "id": 1
@@ -270,7 +297,14 @@
       "likeNumber": 0,
       "photo": "../../../assets/images/debat.jpg",
       "likeusers": [],
-      "comments": [],
+      "comments": [
+        {
+          "activityID": 3,
+          "userID": "4",
+          "message": "great!",
+          "id": 23
+        }
+      ],
       "requests": [],
       "participant": [
         {
@@ -297,6 +331,20 @@
       "requests": [],
       "participant": [],
       "id": 5
+    },
+    {
+      "title": "test",
+      "date": "2023-11-30",
+      "description": "test",
+      "category": "Workshop",
+      "participantNB": 0,
+      "likeNumber": 0,
+      "photo": "C:\\fakepath\\wave.png",
+      "likeusers": [],
+      "comments": [],
+      "requests": [],
+      "participant": [],
+      "id": 7
     }
   ],
   "requests": []

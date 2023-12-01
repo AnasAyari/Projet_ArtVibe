@@ -1,17 +1,14 @@
 <div class="post-container d-flex">
     <div class="postImage-container d-flex justify-content-center align-items-center">
-        <img src="../../../assets/images/woman.png" alt="post">
+        <img [src]="activity.photo" alt="post">
     </div>
     <div class="postDetails-container d-flex flex-column justify-content-center align-items-center">
         <div class="title">
             <h1>{{activity.title}}</h1>
         </div>
-        <div class="uploader d-flex flex-column">
-            <img src="" alt="profile pic">
-            <h1>Uploader</h1>
-        </div>
+        
         <h2 class="caption">{{activity.description}}</h2>
-        <p class="date" style="font-size: 1.5rem; color: rgba(0, 0, 0, 0.4);">Date of post</p>
+        <p class="date" style="font-size: 1.5rem; color: rgba(0, 0, 0, 0.4);">{{activity.date}}</p>
         <div class="participants-section">
             
             <h3 style="font-size: 1.4rem; font-weight: bold;">Participants</h3>

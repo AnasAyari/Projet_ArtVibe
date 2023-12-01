@@ -48,7 +48,7 @@ export class UserContentComponent implements OnInit{
   savedComment:any;
   Comment(activityID:number,message:string){
     this.comment.activityID = activityID;
-    this.comment.userID = 1;
+    this.comment.userID = this.id;
     this.comment.message = message;
     if(this.comment.message!=""){
       this.commentService.saveComment(this.comment).subscribe(data => {

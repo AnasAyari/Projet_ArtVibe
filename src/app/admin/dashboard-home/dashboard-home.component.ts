@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Activity } from 'src/app/models/activity';
-import { User } from 'src/app/models/user';
+
 import { ActivityService } from 'src/app/services/activity.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -14,13 +13,14 @@ export class DashboardHomeComponent implements OnInit{
 
   activitiesTable!:any[]
   mostParticipatedInActivities:any[] = []
+  
   upComingActivity!:any
-  lastActivity!:any
-  mostLikedActivity!:any
-  activeActivity!:any
+  lastActivity:any = {}
+  mostLikedActivity:any = {}
+  activeActivity:any = {}
   currentDate:Date = new Date();
   date:string = "2023-11-24";
-constructor(private userervice:UserService,private activityService:ActivityService){}
+constructor(private activityService:ActivityService){}
 
   ngOnInit(): void {
     console.log(this.currentDate);
@@ -36,7 +36,7 @@ constructor(private userervice:UserService,private activityService:ActivityServi
 
       this.activitiesTable = this.activitiesTable.sort((a,b) => Number(new Date(a.date))- Number(new Date(b.date)));
       for(let i = 0;i < this.activitiesTable.length;i++){
-        if(new Date(this.activitiesTable[i].date) > this.currentDate){
+        if(this.activitiesTable[i].date && new Date(this.activitiesTable[i].date) > this.currentDate){
           console.log(this.activitiesTable[i].date);
         this.upComingActivity = this.activitiesTable[i];
         console.log(this.upComingActivity);
@@ -45,7 +45,7 @@ constructor(private userervice:UserService,private activityService:ActivityServi
       }
       this.activitiesTable = this.activitiesTable.sort((a,b) => Number(new Date(a.date))- Number(new Date(b.date)));
       for(let i = this.activitiesTable.length-1;i > 0;i--){
-        if(new Date(this.activitiesTable[i].date) < this.currentDate){
+        if(this.activitiesTable[i].date && new Date(this.activitiesTable[i].date) < this.currentDate){
           console.log(this.activitiesTable[i].date);
           this.lastActivity = this.activitiesTable[i]
         }
